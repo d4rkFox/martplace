@@ -1,34 +1,50 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  ul,li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .container {
-    margin: 0 auto;
-    max-width: 1170px;
-    padding: 0 15px;
-  }
-
-  body {
-    font-size: 16px;
-    line-height: 30px;
-    font-family:'Quicksand-Regular', sans-serif;
-    font-weight: 400;
+  box-sizing: border-box;
 }
-  
-  
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 0 15px;
+}
+
+body {
+  font-size: 16px;
+  line-height: 30px;
+  font-family: 'Quicksand-Regular', sans-serif;
+  font-weight: 400;
+  color: #555555;
+}
+
+.title {
+  height: 110px;
+  margin-bottom: 50px;
+  padding: 40px 360px 40px 28px;
+  background-color: #ffffff;
+  font-size: 30px;
+  color: #000000;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+}
