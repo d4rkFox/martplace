@@ -14,15 +14,12 @@
   <!-- Start Header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 
   <header class="header">
-    <div class="header__inner">
       <div class="header__top">
         <div class="container">
           <div class="header__top-inner">
-            <div class="header__logo">
               <a href="#" class="header__logo-link">
                 <img class="header__logo-img" src="images/logo.png" alt="logo">
               </a>
-            </div>
             <a class="header__link" href="#">
               Become a Seller
             </a>
@@ -78,14 +75,14 @@
             </nav>
             <div class="menu__search">
               <form class="menu__search-form">
-                <input class="menu__search-text" type="text" placeholder="Search product here...">
+                <input class="menu__search-text" type="search" placeholder="Search product here...">
                 <button class="menu__search-btn" type="submit"></button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
+  
   </header>
 
   <!-- end Header>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -96,7 +93,6 @@
 
     <section class="search">
       <div class="container">
-        <div class="search__inner">
           <div class="search__content">
             <div class="search__title">Create Your Own
               <span class="search__subtitle">Digital Product Marketplace</span>
@@ -115,16 +111,22 @@
           <div class="search__inner-form">
             <div class="search__form">
               <form class="search__box" action="">
-                <input class="search__input" type="text" placeholder="Search your products...">
-                <div class="search__dropdown">
-                  All Categories
-                </div>
+                <input class="search__input" type="search" placeholder="Search your products...">
+               <div class="search__nav">
+                  <select class="search__dropdown">
+                  <option class="search__item">All Categories</option>
+                  <option class="search__item">Categories-1</option>
+                  <option class="search__item">Categories-2</option>
+                  <option class="search__item">Categories-3</option>
+                </select>
+              </div>
               </form>
-              <button class="search__btn" type="submit">Search Now</button>
+              <form class="search__button">
+                <button class="search__btn" type="submit">Search Now</button>
+              </form>      
             </div>
           </div>
 
-        </div>
       </div>
     </section>
     <!-- end Search>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -368,8 +370,8 @@
         </div>
       </div>
     </section>
-    <!-- // end Slider-product/////////////////////////////////////////// -->
-    <!-- // start Product/////////////////////////////////////////////// -->
+    <!-- // end Slider-product>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- // start Product>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
     <aside class="product">
       <div class="container">
