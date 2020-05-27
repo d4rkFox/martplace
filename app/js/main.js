@@ -18,6 +18,14 @@ $(function () {
         readOnly: true,
     });
 
+    $(".production__star").rateYo({
+        starWidth: "15px",
+        ratedFill: "#ffc000",
+        rating: 4.2,
+        readOnly: true,
+        spacing: "2px"
+    });
+
     $('.followers__wrapper').slick({
         prevArrow: '<button type="button" class="slick-btn slick-btn__bg slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-btn slick-btn__bg slick-next"></button>',
@@ -36,6 +44,17 @@ $(function () {
         })
     });
 
+
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        grid: true,
+        min: 0,
+        max: 400,
+        from: 30,
+        to: 300,
+        step: 10,
+        prefix: "$"
+    });
     
     var mixer = mixitup('.product__inner-items');
 });

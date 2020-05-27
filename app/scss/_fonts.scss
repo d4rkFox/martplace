@@ -150,6 +150,13 @@
 	content: "\e874";
 }
 
+.lnr-arrow-left:before {
+	content: "\e879";
+}
+.lnr-arrow-right:before {
+	content: "\e87a";
+}
+
 @font-face {
 	font-family: 'icomoon';
 	src:  url('../fonts/icomoon.eot?89gfxu');

@@ -1,11 +1,35 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: 'Quicksand-Regular', sans-serif;
+  font-weight: 400;
+  color: #555555;
+}
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.page__content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
 }
 
 a {
@@ -28,13 +52,6 @@ button {
   padding: 0 30px;
 }
 
-body {
-  font-size: 16px;
-  line-height: 30px;
-  font-family: 'Quicksand-Regular', sans-serif;
-  font-weight: 400;
-  color: #555555;
-}
 
 .title {
   height: 110px;
@@ -64,10 +81,11 @@ body {
   }
 }
 
+
+//////// start slick button global ////////////////////////////////////////
 .slick {
   position: relative;
 }
-
 .slick-btn {
   position: absolute;
   top: -125px;
@@ -89,8 +107,6 @@ body {
   }
 
 }
-
-
 .slick-prev {
   border-radius: 45px 0 0 45px;
   right: 85px;
@@ -105,7 +121,6 @@ body {
     right: 21px;
   }
 }
-
 .slick-next {
   border-radius: 0 45px 45px 0;
   right: 31px;
@@ -121,17 +136,21 @@ body {
   }
 }
 
+//////// end slick button global ////////////////////////////////////////
+//start global avatar///////////////////////////////////////////
 .weekly,
 .product,
 .followers,
-.reviews {
+.reviews,
+.production {
   &__img {
     position: relative;
-    width: 30px;
+    min-width: 30px;
     height: 30px;
     border-radius: 50%;
     overflow: hidden;
   }
+
   &__avatar {
     position: absolute;
     top: 50%;
@@ -142,11 +161,149 @@ body {
     transform: translate(-50%, -50%);
   }
 }
+//end global avatar///////////////////////////////////////////
+//start global Cart product///////////////////////////////////////////
+.product,
+.followers,
+.production {
 
-.followers__wrapper .slick-slide {
-  max-width: 360px;
-  margin-right: 30px;
+  &__photo {
+    position: relative;
+    margin-bottom: 25px;
+    height: 230px;
+    overflow: hidden;
+  }
+
+  &__photo-img {
+    position: absolute;
+    max-width: 100%;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__desc {
+    padding: 0 30px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-family: 'Quicksand-Medium', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+
+  &__user {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  &__username {
+    margin-left: 8px;
+    font-size: 15px;
+    color: #000000;
+  }
+
+  &__plugin {
+    position: relative;
+    margin-left: 17px;
+    padding-left: 25px;
+    color: #7347c1;
+    ;
+
+    &--wordpress,
+    &--psd,
+    &--html {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 17px;
+        height: 17px;
+        background-image: url(../images/icons/wordpress.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    &--psd {
+      &::before {
+        top: 5px;
+        height: 20px;
+        background-image: url(../images/icons/psd.svg);
+      }
+    }
+
+    &--html {
+      &::before {
+        height: 18px;
+        background-image: url(../images/icons/html.png);
+      }
+    }
+  }
+
+  &__text {
+    padding-bottom: 28px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px 19px 30px;
+    border-top: 1px solid #ececec;
+  }
+
+  &__price {
+    padding: 0 15px;
+    color: #0674ec;
+    font-family: 'Quicksand-Medium', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 30px;
+    background-color: #e6f1fd;
+  }
+
+  &__like {
+    position: relative;
+    margin-left: 15px;
+    padding-left: 21px;
+    font-size: 15px;
+    color: #6f7d8d;
+
+    &::before {
+      content: "\e813";
+      position: absolute;
+      left: 0;
+      font-size: 15px;
+      font-family: 'Linearicons-Free';
+      color: #7f4ec2;
+    }
+  }
+
+  &__basket {
+    position: relative;
+    color: #0674ec;
+    padding-left: 20px;
+    font-size: 15px;
+
+    &::before {
+      content: "\e82e";
+      position: absolute;
+      left: 0;
+      font-size: 15px;
+      font-family: 'Linearicons-Free';
+      color: #0674ec;
+    }
+
+
+
+  }
 }
+
+//end global Cart product///////////////////////////////////////////
+// start global button//////////////////////////////
 
 .link {
   height: 58px;
@@ -156,6 +313,7 @@ body {
   border-radius: 55px;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
+
   &:hover {
     background-color: rgba($color: #ffffff, $alpha: 0.5);
     border: 1px solid transparent;
@@ -166,7 +324,8 @@ body {
 .followers,
 .sell,
 .reviews,
-.join {
+.join,
+.price {
   &__button {
     display: inline-block;
     height: 58px;
@@ -180,3 +339,122 @@ body {
     }
   }
 }
+
+// end global button//////////////////////////////
+// start global aside///////////////////////
+
+.categories,
+.sort,
+.price {
+  width: 265px;
+  margin-bottom: 30px;
+  padding: 25px 30px 8px 30px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+
+  &__title{
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e7ebee;
+    font-size: 20px;
+    color: #010101;
+
+    &::before {
+      content: "\e874";
+      position: absolute;
+      right: 10px;
+      top: 2px;
+      width: 0;
+      height: 0;
+      font-family: 'Linearicons-Free';
+      font-size: 12px;
+    }
+    
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__list-link {
+    position: relative;
+    font-size: 15px;
+    line-height: 36px;
+    padding-left: 20px;
+    transition: all 0.3;
+    &:hover {
+      color: #0674ec;
+    }
+    &::before {
+      content: "\e876";
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 0;
+      font-family: 'Linearicons-Free';
+      font-size: 10px;
+     
+    }
+  }
+}
+
+//edit plugins//////////////////////////////////////////
+
+///start slick///////////////////
+.followers__wrapper .slick-slide {
+  max-width: 360px;
+  margin-right: 30px;
+}
+///end slick///////////////////
+
+
+//////start ionRange aside__price////////////////////
+.irs-with-grid .irs-grid {
+  display: none; 
+}
+
+.irs--flat .irs-line,
+.irs--flat .irs-bar{
+  height: 6px;
+}
+
+.irs--flat .irs-bar{
+background-color: #7347c1;
+}
+
+.irs--flat .irs-max, .irs--flat .irs-min{
+  display: none;
+}
+
+.irs--flat .irs-handle{
+  top: 18px;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 4px solid #0674ec;
+  border-radius: 50%;
+}
+
+.irs--flat .irs-handle>i:first-child{
+  background-color: transparent;
+  height: 0;
+}
+
+.irs--flat .irs-from:before, .irs--flat .irs-single:before, .irs--flat .irs-to:before {
+    display: none;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
+  top: 50px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  color: #7347c1;
+  font-size: 15px;
+  text-shadow: none;
+  padding: 10px 20px;
+  background-color: #f1ecf9;
+  border-radius: 30px;
+}
+//////end ionRange aside__price////////////////////
