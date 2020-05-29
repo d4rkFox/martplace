@@ -1,3 +1,5 @@
+@import 'vars';
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -86,6 +88,7 @@ button {
 .slick {
   position: relative;
 }
+
 .slick-btn {
   position: absolute;
   top: -125px;
@@ -107,6 +110,7 @@ button {
   }
 
 }
+
 .slick-prev {
   border-radius: 45px 0 0 45px;
   right: 85px;
@@ -121,6 +125,7 @@ button {
     right: 21px;
   }
 }
+
 .slick-next {
   border-radius: 0 45px 45px 0;
   right: 31px;
@@ -138,6 +143,8 @@ button {
 
 //////// end slick button global ////////////////////////////////////////
 //start global avatar///////////////////////////////////////////
+.notification,
+.message,
 .weekly,
 .product,
 .followers,
@@ -161,6 +168,7 @@ button {
     transform: translate(-50%, -50%);
   }
 }
+
 //end global avatar///////////////////////////////////////////
 //start global Cart product///////////////////////////////////////////
 .product,
@@ -353,7 +361,7 @@ button {
   border-radius: 4px;
   box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
 
-  &__title{
+  &__title {
     position: relative;
     margin-bottom: 20px;
     padding-bottom: 22px;
@@ -371,21 +379,25 @@ button {
       font-family: 'Linearicons-Free';
       font-size: 12px;
     }
-    
+
   }
+
   &__list {
     list-style: none;
     padding: 0;
   }
+
   &__list-link {
     position: relative;
     font-size: 15px;
     line-height: 36px;
     padding-left: 20px;
     transition: all 0.3;
+
     &:hover {
       color: #0674ec;
     }
+
     &::before {
       content: "\e876";
       position: absolute;
@@ -394,10 +406,209 @@ button {
       height: 0;
       font-family: 'Linearicons-Free';
       font-size: 10px;
-     
+
     }
   }
 }
+
+
+//menu hover///////////////////////////////////////////
+
+
+.notification__link,
+.notification__status,
+.message__link,
+.basket__link {
+  position: relative;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+
+  &::before {
+    color: #7e8fa1;
+    font-family: 'Linearicons-Free';
+    font-size: 20px;
+  }
+}
+
+.notification__edit,
+.message__edit,
+.basket__edit {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  font-size: 14px;
+  font-family: 'Quicksand-Medium', sans-serif;
+  font-weight: 500;
+  line-height: 22px;
+  border-radius: 22px;
+  color: #ffffff;
+}
+
+.user,
+.home,
+.wordpress,
+.products-menu {
+  &__list {
+    position: absolute;
+    top: 64px;
+    height: 0;
+    overflow: hidden;
+    width: 270px;
+    padding: 0 20px 0;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+    list-style: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $bg-text;
+    }
+  }
+
+  &__item {
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #fff;
+      background-color: $bg-text;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    font-size: 15px;
+    line-height: 10px;
+    color: #54667a;
+    transition: all 0.5s;
+
+    &:hover {
+      color: #fff;
+
+      &::before {
+        color: #fff;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      left: 10px;
+      @include f-icons;
+      color: #54667a;
+    }
+  }
+
+  &:hover {
+
+    .user__list,
+    .home__list,
+    .wordpress__list,
+    .products-menu__list {
+      height: auto;
+      padding: 20px;
+      overflow: visible;
+      line-height: 44px;
+      transition: all 0.5s;
+    }
+
+    .user__link,
+    .home__link,
+    .wordpress__link,
+    .products-menu__link {
+      line-height: 44px;
+    }
+  }
+
+}
+
+
+.notification,
+.message,
+.basket {
+  position: relative;
+
+  &__item {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+    top: 66px;
+    width: 370px;
+    border: none;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $bg-text;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8px 10px 8px;
+      border-color: transparent transparent $bg-text transparent;
+      box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+    }
+  }
+}
+
+
+.notification,
+.message {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s;
+  }
+
+  &__title-text {
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+  }
+
+  &__view {
+    font-size: 15px;
+    color: $bg-text;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+      text-shadow: 0 0 0.5px;
+    }
+  }
+
+}
+
+
+
+
 
 //edit plugins//////////////////////////////////////////
 
@@ -406,28 +617,30 @@ button {
   max-width: 360px;
   margin-right: 30px;
 }
+
 ///end slick///////////////////
 
 
 //////start ionRange aside__price////////////////////
 .irs-with-grid .irs-grid {
-  display: none; 
-}
-
-.irs--flat .irs-line,
-.irs--flat .irs-bar{
-  height: 6px;
-}
-
-.irs--flat .irs-bar{
-background-color: #7347c1;
-}
-
-.irs--flat .irs-max, .irs--flat .irs-min{
   display: none;
 }
 
-.irs--flat .irs-handle{
+.irs--flat .irs-line,
+.irs--flat .irs-bar {
+  height: 6px;
+}
+
+.irs--flat .irs-bar {
+  background-color: #7347c1;
+}
+
+.irs--flat .irs-max,
+.irs--flat .irs-min {
+  display: none;
+}
+
+.irs--flat .irs-handle {
   top: 18px;
   width: 18px;
   height: 18px;
@@ -436,16 +649,20 @@ background-color: #7347c1;
   border-radius: 50%;
 }
 
-.irs--flat .irs-handle>i:first-child{
+.irs--flat .irs-handle>i:first-child {
   background-color: transparent;
   height: 0;
 }
 
-.irs--flat .irs-from:before, .irs--flat .irs-single:before, .irs--flat .irs-to:before {
-    display: none;
+.irs--flat .irs-from:before,
+.irs--flat .irs-single:before,
+.irs--flat .irs-to:before {
+  display: none;
 }
 
-.irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to {
   top: 50px;
   display: flex;
   align-items: center;
@@ -457,4 +674,5 @@ background-color: #7347c1;
   background-color: #f1ecf9;
   border-radius: 30px;
 }
+
 //////end ionRange aside__price////////////////////

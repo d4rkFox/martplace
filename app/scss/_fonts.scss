@@ -58,6 +58,34 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.lnr-trash:before {
+	content: "\e811";
+}
+
+.lnr-exit:before {
+	content: "\e820";
+}
+
+.lnr-book:before {
+	content: "\e828";
+}
+
+.lnr-upload:before {
+	content: "\e866";
+}
+
+.lnr-dice:before {
+	content: "\e812";
+}
+
+.lnr-cog:before {
+	content: "\e810";
+}
+
+.lnr-home:before {
+	content: "\e800";
+}
+
 .lnr-envelope:before {
 	content: "\e818";    /* конверт*/
 }
@@ -72,6 +100,10 @@
 
 .lnr-users:before {
 	content: "\e82b";
+}
+
+.lnr-user:before {
+	content: "\e82a";
 }
 
 .lnr-cart:before {
@@ -183,7 +215,10 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
   }
-  
+
+  .lnr-star:before {
+	content: "\e814";
+}
   .icon-twitter:before {
 	content: "\f099";
   }

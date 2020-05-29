@@ -21,12 +21,13 @@
   }
 
   &__link {
+    height: 40px;
     margin-left: auto;
     margin-right: 60px;
     margin-bottom: 8px;
     padding: 3px 19px;
     font-size: 14px;
-    line-height: 28px;
+    line-height: 34px;
     color: #ffffff;
     background-color: $bg-text;
     border-radius: 19px;
@@ -36,13 +37,14 @@
     &:hover {
       opacity: 0.8;
     }
-
   }
 
   &__user {
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    padding: 29px 0;
   }
 
   &__avatar {
@@ -68,11 +70,458 @@
   }
 }
 
-//start menu//////////////////////////////////////////////////////////////////////////////////
+
+//////////////start notification hover////////////////////////
+
+.notification {
+
+  // display: none;
+  &__edit {
+    background-color: #ff6a6c;
+  }
+
+  &__item {
+    left: -13px;
+    padding: 0 25px 0;
+
+    &::before {
+      left: 30px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border-top: 1px solid #e8ebf0;
+    transition: all 0.5s;
+  }
+
+  &__img {
+    min-width: 40px;
+    height: 40px;
+  }
+
+  &__text {
+    max-width: 235px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #747a86;
+    margin-right: 14px;
+    margin-top: -6px;
+  }
+
+  &__name {
+    @include f500;
+    color: #333333;
+
+    &:hover {
+      opacity: 0.8;
+      text-shadow: 0 0 0.5px;
+    }
+  }
+
+  &__product {
+    display: block;
+    font-size: 15px;
+    color: $bg-text;
+
+    &:hover {
+      opacity: 0.8;
+      text-shadow: 0 0 0.5px;
+    }
+  }
+
+  &__time {
+    font-size: 14px;
+    color: #747a86;
+  }
+
+  &__status {
+    width: 35px;
+    height: 35px;
+    background-color: #e6f1fd;
+    padding: 0;
+    align-self: center;
+
+    &::before {
+      font-size: 15px;
+      line-height: 34px;
+      color: $bg-text;
+    }
+
+    &.lnr-cart {
+      background-color: #f1ecf9;
+
+      &::before {
+        color: #7347c1;
+      }
+    }
+
+    &.lnr-cart {
+      background-color: #fff0f0;
+
+      &::before {
+        color: #ff6a6c;
+      }
+    }
+
+    &.lnr-star {
+      background-color: #effaeb;
+
+      &::before {
+        color: #62d03a;
+      }
+    }
+  }
+
+  &:hover {
+    .notification__link {
+      padding: 15px 15px 38px;
+    }
+
+    .notification__title {
+      padding-bottom: 15px;
+    }
+
+    .notification__user {
+      padding: 22px 0 8px;
+    }
+
+    .notification__item {
+      height: auto;
+      padding: 20px 25px 10px;
+      overflow: visible;
+      transition: all 0.5s;
+    }
+  }
+}
+
+//////////////end notification hover////////////////////////
+//////////////start message hover////////////////////////
+
+.message {
+  // display: none;
+
+  &__edit {
+    background-color: #62d03a;
+  }
+
+  &__item {
+    right: -13px;
+    transition: all 0, 3;
+
+    &::before {
+      right: 30px;
+    }
+  }
+
+  &__title {
+    padding: 0 25px 0;
+    transition: all 0.3s;
+  }
+
+  &__user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 25px 0;
+    border-top: 1px solid #e8ebf0;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__img {
+    min-width: 40px;
+    height: 40px;
+
+  }
+
+  &__subtitle {
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__username {
+    position: relative;
+    padding-right: 30px;
+    @include f500;
+    color: #333333;
+
+    &.lnr-envelope::before {
+      position: absolute;
+      right: 0;
+      font-family: 'Linearicons-Free';
+      font-size: 15px;
+      color: $bg-text;
+    }
+  }
+
+  &__time {
+    font-size: 15px;
+    color: #747a86;
+
+    &--active {
+      color: $bg-text;
+    }
+
+  }
+
+  &__icom {
+    margin-left: 10px;
+  }
+
+  &__text {
+    font-size: 15px;
+  }
+
+  &:hover {
+    .message__link {
+      padding: 15px 15px 38px;
+    }
+
+    .message__title {
+      padding: 0 25px 15px;
+    }
+
+    .message__user {
+      padding: 14px 25px 7px;
+    }
+
+    .message__item {
+      height: auto;
+      padding: 20px 0 10px;
+      overflow: visible;
+      transition: all 0.5s;
+    }
+  }
+}
+
+//////////////end message hover////////////////////////
+//////////////start basket hover////////////////////////
+
+.basket {
+  &__link {
+    margin-right: 30px;
+  }
+
+  &__edit {
+    background-color: $bg-text;
+  }
+
+  &__item {
+    right: 5px;
+    width: 400px;
+    border-radius: 0 0 4px 4px;
+
+    &::before {
+      right: 40px;
+    }
+
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0;
+    border-bottom: 1px solid #e8ebf0;
+    transition: all 0.3s;
+
+  }
+
+  &__img {
+    position: relative;
+    min-width: 80px;
+    height: 70px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    margin-left: 20px;
+    @include f500;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__text-link {
+    position: relative;
+    padding-left: 25px;
+    font-size: 15px;
+    color: #7347c1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      background-image: url(../images/icons/wordpress.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .basker__status {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    text-align: center;
+  }
+
+  &__del {
+    margin: 0 auto 10px;
+    text-align: center;
+
+    &.lnr-trash {
+      width: 35px;
+      height: 35px;
+      background-color: #f1ecf9;
+      border-radius: 50%;
+      border: none;
+      outline: transparent;
+
+      &::before {
+        font-family: 'Linearicons-Free';
+        font-size: 15px;
+        line-height: 36px;
+        color: #818c98;
+      }
+    }
+  }
+
+  &__price {
+    padding: 0 15px;
+    color: #0674ec;
+    font-family: 'Quicksand-Medium', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 30px;
+    background-color: #e6f1fd;
+
+  }
+
+  &__total {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 25px 0;
+    @include f500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    transition: all 0.3s;
+  }
+
+  &__total-text {
+    padding-right: 30px;
+  }
+
+  &__button {
+    display: flex;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 60px;
+    font-size: 15px;
+    color: #fefefe;
+    background-color: #7347c1;
+    border-radius: 0 0 0 4px;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__btn-checkout {
+    background-color: $bg-text;
+    border-radius: 0 0 4px 0;
+  }
+
+  &:hover {
+    .basket__link {
+      padding: 15px 15px 38px;
+    }
+
+    .basket__box {
+      padding: 25px;
+    }
+
+    .basket__total {
+      padding: 25px;
+    }
+
+    .basket__item {
+      height: auto;
+      overflow: visible;
+      transition: all 0.5s;
+    }
+  }
+}
+
+//////////////end basket hover////////////////////////
+///////////////start user hover////////////////////////
+.user {
+  &__list {
+    right: 0;
+    top: 92px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 30px;
+      top: -10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8px 10px 8px;
+      border-color: transparent transparent $bg-text transparent;
+      box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+    }
+  }
+
+  &__link {
+    padding-left: 40px;
+  }
+
+}
+
+//////////////end user hover////////////////////////
+
+
 //end header//////////////////////////////////////////////////////////////////////////////////
+//start menu//////////////////////////////////////////////////////////////////////////////////
 
 .menu {
+  position: relative;
+
   &__inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,6 +543,7 @@
   }
 
   &__list-link {
+    padding: 31px 0;
     font-size: 15px;
     line-height: 42px;
     @include f500;
@@ -158,6 +608,129 @@
     }
   }
 }
+
+//start home hover/////////////////////////////////////////////////////////////////////////////
+
+.home {
+  &__list {
+    top: 80px;
+  }
+}
+
+//end home hover/////////////////////////////////////////////////////////////////////////////
+//start wordpress hover/////////////////////////////////////////////////////////////////////////////
+
+.wordpress {
+  &__list {
+    top: 80px;
+  }
+}
+
+//end wordpress hover/////////////////////////////////////////////////////////////////////////////
+//start all products hover/////////////////////////////////////////////////////////////////////////////
+
+.products-menu {
+  &__list {
+    top: 80px;
+  }
+}
+//end all products hover/////////////////////////////////////////////////////////////////////////////
+//start pages hover/////////////////////////////////////////////////////////////////////////////
+
+.pages {
+
+
+  &__item {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+    padding: 0 25px 0;
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $bg-text;
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    padding-bottom: 11px;
+    @include f500;
+    border-bottom: 1px solid #e8ebf0;
+  }
+
+  &__col {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    max-width: 200px;
+    list-style: none;
+
+    &+& {
+      margin-left: 80px;
+    }
+  }
+
+  &__list-item {
+    
+    &:hover {
+      border-radius: 4px;
+      background-color: $bg-text;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 10px;
+    color: #54667a;
+    transition: all 0.5s;
+    &:hover {
+      color: #fff;
+
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+
+  &:hover {
+    .pages__item {
+      height: auto;
+      overflow: visible;
+      padding: 25px;
+      transition: all 0.5s;
+    }
+    .pages__link {
+      line-height: 36px;
+    }
+  }
+}
+
+
+
+//end pages hover/////////////////////////////////////////////////////////////////////////////
+
 
 //end menu//////////////////////////////////////////////////////////////////////////////////
 //start caption/////////////////////////////////////////////////////////////////////////////
@@ -1753,6 +2326,14 @@
   &__photo {
     height: 160px;
     margin: 0;
+  }
+
+  &__photo-img {
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &__desc {
