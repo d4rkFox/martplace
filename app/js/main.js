@@ -55,6 +55,15 @@ $(function () {
         step: 10,
         prefix: "$"
     });
+
+    $(".header__btn").on ('click',function(){
+        $('.header__box').toggleClass('header__box--active')
+        $('.header__logo-link').toggleClass('header__logo-link--active')
+    });
+
+    $(".menu__btn-wrapper").on('click', function(){
+        $(".menu__list").slideToggle()
+    });
     
     var mixer = mixitup('.product__inner-items');
 });
