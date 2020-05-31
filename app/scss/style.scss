@@ -549,7 +549,7 @@
 //start menu//////////////////////////////////////////////////////////////////////////////////
 
 .menu {
-  position: relative;
+  position: static;
 
   &__btn-wrapper {
     position: absolute;
@@ -593,6 +593,7 @@
   }
 
   &__inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -608,7 +609,7 @@
   }
 
   &__list-item {
-    &+& {
+    & + & {
       margin-left: 28px;
     }
   }
@@ -717,7 +718,7 @@
     height: 0;
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+
     z-index: 1;
     top: 80px;
     left: 0;
@@ -739,6 +740,14 @@
     }
   }
 
+  &__martplace {
+    margin-right: auto;
+  }
+
+  &__dashboard {
+    margin-right: auto;
+  }
+
   &__title {
     margin-bottom: 18px;
     padding-bottom: 11px;
@@ -757,7 +766,7 @@
     max-width: 200px;
     list-style: none;
 
-    &+& {
+    & + & {
       margin-left: 80px;
     }
   }
@@ -801,12 +810,9 @@
   }
 }
 
-
-
 //end pages hover/////////////////////////////////////////////////////////////////////////////
-
-
 //end menu//////////////////////////////////////////////////////////////////////////////////
+
 //start caption/////////////////////////////////////////////////////////////////////////////
 
 .caption {
@@ -846,6 +852,7 @@
   &__link {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0 auto;
   }
 
@@ -857,7 +864,7 @@
   }
 
   &__link-item {
-    &+& {
+    & + & {
       margin-left: 30px;
     }
   }
@@ -928,6 +935,7 @@
     width: 100%;
     padding: 13px 30px;
     border: none;
+    background: transparent;
     outline: transparent;
 
     &::placeholder {
@@ -995,6 +1003,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -1039,10 +1048,19 @@
     display: flex;
   }
 
-  &__photo {
+  &__images {
+    position: relative;
     max-width: 555px;
+    min-height: 450px;
+    overflow: hidden;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 4px 0 0 4px;
+
   }
 
   &__desc {
@@ -1122,6 +1140,7 @@
   &__rating {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__price {
@@ -1166,7 +1185,7 @@
 }
 
 // end section weekly///////////////////////////////////////////
-// start section Product ana slider-follower///////////////////////////////////////////
+// start section Product ana follower///////////////////////////////////////////
 
 .product {
   background-color: #f6f7fb;
@@ -1187,7 +1206,6 @@
   &__content {
     max-width: 360px;
     min-height: 530px;
-    margin-right: 20px;
     background-color: #ffffff;
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
@@ -1285,6 +1303,7 @@
   &__inner-btn {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 50px;
     padding: 0 25px;
     max-width: 100%;
@@ -1326,7 +1345,7 @@
       opacity: 0.8;
     }
 
-    &+& {
+    & + & {
       margin-left: 10px;
     }
   }
@@ -1379,7 +1398,7 @@
       background-color: #ffffff;
     }
 
-    &+& {
+    & + & {
       margin-left: 10px;
     }
   }
@@ -1407,7 +1426,19 @@
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
   }
 
+  &__link-img {
+    display: block;
+    position: relative;
+    max-width: 768px;
+    min-height: 300px;
+    overflow: hidden;
+  }
+
   &__photo-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: all 0.3s;
 
     &:hover {
@@ -1427,6 +1458,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -1660,6 +1692,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
   }
 
   &__item {
@@ -1671,7 +1704,7 @@
     border-radius: 0 4px 4px 0;
     box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
 
-    &+& {
+    & + & {
       margin-left: 30px;
     }
   }
@@ -1837,7 +1870,7 @@
   }
 
   &__item {
-    &+& {
+    & + & {
       border-left: 1px solid #e8eaf3;
     }
   }
@@ -2208,7 +2241,7 @@
     position: relative;
     display: inline-block;
 
-    &+& {
+    & + & {
       padding-left: 20px;
 
       &::before {
@@ -2243,7 +2276,7 @@
   }
 
   &__products {
-    &+& {
+    & + & {
       margin-left: 30px;
       margin-inline-end: auto;
     }
@@ -2276,7 +2309,7 @@
       font-size: 12px;
     }
 
-    &+& {
+    & + & {
       margin-left: 30px;
     }
   }
@@ -2345,6 +2378,7 @@
 
 //end aside-categories////////////////////////////////////
 //start aside-sort////////////////////////////////////
+
 .sort__list-link::before {
   content: "";
   background-image: url(../images/icons/Ellipse-icon.png);
@@ -2356,6 +2390,7 @@
 
 //end aside-sort////////////////////////////////////
 //start aside-price////////////////////////////////////
+
 .price {
 
   &__title {
@@ -2380,6 +2415,7 @@
 //end aside//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //start section production //////////////////////////////////////////////////////
+
 .production {
   margin-left: 30px;
   display: flex;
@@ -2455,6 +2491,7 @@
 
 //end section production //////////////////////////////////////////////////////
 //////start pagination/////////////////
+
 .pagination {
 
   &__list {
