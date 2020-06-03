@@ -18,14 +18,15 @@
 
   &__logo-link {
     margin-left: 7px;
+    transition: all 0.3s;
   }
 
   &__link {
-    height: 40px;
+    height: 35px;
     margin-left: auto;
-    margin-right: 60px;
+    margin-right: 22px;
     margin-bottom: 8px;
-    padding: 3px 19px;
+    padding: 1px 19px;
     font-size: 14px;
     line-height: 34px;
     color: #ffffff;
@@ -101,12 +102,11 @@
   }
 }
 
-
 //////////////start notification hover////////////////////////
 
 .notification {
 
-  // display: none;
+
   &__edit {
     background-color: #ff6a6c;
   }
@@ -169,13 +169,21 @@
   }
 
   &__status {
+    position: relative;
+    text-align: center;
     width: 35px;
     height: 35px;
     background-color: #e6f1fd;
     padding: 0;
+    border-radius: 50%;
     align-self: center;
 
     &::before {
+
+      color: #7e8fa1;
+      font-family: 'Linearicons-Free';
+      font-size: 20px;
+
       font-size: 15px;
       line-height: 34px;
       color: $bg-text;
@@ -207,9 +215,6 @@
   }
 
   &:hover {
-    .notification__link {
-      padding: 15px 15px 38px;
-    }
 
     .notification__title {
       padding-bottom: 15px;
@@ -232,7 +237,7 @@
 //////////////start message hover////////////////////////
 
 .message {
-  // display: none;
+
 
   &__edit {
     background-color: #62d03a;
@@ -257,6 +262,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 0 25px 0;
+    line-height: 25px;
     border-top: 1px solid #e8ebf0;
     transition: all 0.3s;
 
@@ -315,16 +321,13 @@
   }
 
   &:hover {
-    .message__link {
-      padding: 15px 15px 38px;
-    }
 
     .message__title {
       padding: 0 25px 15px;
     }
 
     .message__user {
-      padding: 14px 25px 7px;
+      padding: 16px 25px 7px;
     }
 
     .message__item {
@@ -414,7 +417,7 @@
     }
   }
 
-  .basker__status {
+  &__status {
     display: flex;
     flex-wrap: wrap;
     align-self: center;
@@ -495,10 +498,6 @@
   }
 
   &:hover {
-    .basket__link {
-      padding: 15px 15px 38px;
-    }
-
     .basket__box {
       padding: 25px;
     }
@@ -518,9 +517,11 @@
 //////////////end basket hover////////////////////////
 ///////////////start user hover////////////////////////
 .user {
+  cursor: pointer;
+
   &__list {
     right: 0;
-    top: 84px;
+    top: 82px;
 
     &::before {
       content: '';
@@ -543,8 +544,6 @@
 }
 
 //////////////end user hover////////////////////////
-
-
 //end header//////////////////////////////////////////////////////////////////////////////////
 //start menu//////////////////////////////////////////////////////////////////////////////////
 
@@ -556,7 +555,7 @@
     width: 40px;
     height: 30px;
     top: 30px;
-    left: -50px;
+    left: -80px;
   }
 
   &__btn {
@@ -606,20 +605,22 @@
 
   &__list-item {
     display: inline-block;
-  }
+    cursor: pointer;
 
-  &__list-item {
-    & + & {
+    &+& {
       margin-left: 28px;
     }
   }
 
   &__list-link {
-    padding: 31px 0;
+    padding: 20px 0;
     font-size: 15px;
     line-height: 42px;
     @include f500;
     text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
     color: #333333;
     transition: all 0.3s;
 
@@ -766,7 +767,7 @@
     max-width: 200px;
     list-style: none;
 
-    & + & {
+    &+& {
       margin-left: 80px;
     }
   }
@@ -796,7 +797,8 @@
     }
   }
 
-  &:hover {
+  // &:hover,
+  &--active {
     .pages__item {
       height: auto;
       overflow: visible;
@@ -864,7 +866,7 @@
   }
 
   &__link-item {
-    & + & {
+    &+& {
       margin-left: 30px;
     }
   }
@@ -1111,6 +1113,15 @@
       background-position: center;
       background-size: cover;
     }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -6px;
+      height: 44px;
+    }
   }
 
   &__text {
@@ -1345,7 +1356,7 @@
       opacity: 0.8;
     }
 
-    & + & {
+    &+& {
       margin-left: 10px;
     }
   }
@@ -1398,7 +1409,7 @@
       background-color: #ffffff;
     }
 
-    & + & {
+    &+& {
       margin-left: 10px;
     }
   }
@@ -1411,7 +1422,6 @@
 
 // end section Product ///////////////////////////////////////////
 // start section follower///////////////////////////////////////////
-
 
 .followers {
   padding: 120px 0;
@@ -1704,7 +1714,7 @@
     border-radius: 0 4px 4px 0;
     box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
 
-    & + & {
+    &+& {
       margin-left: 30px;
     }
   }
@@ -1790,12 +1800,22 @@
   }
 
   &__title {
+    position: relative;
     display: block;
     margin-bottom: 17px;
     @include f500;
     font-size: 22px;
     line-height: 36px;
     color: #000000;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -6px;
+      height: 44px;
+    }
   }
 
   &__text {
@@ -1870,7 +1890,7 @@
   }
 
   &__item {
-    & + & {
+    &+& {
       border-left: 1px solid #e8eaf3;
     }
   }
@@ -1900,7 +1920,7 @@
 
 .join {
   padding: 105px 0 80px;
-  min-width: 400px;
+  min-height: 400px;
   color: #ffffff;
   background: linear-gradient(to right, #7221a0 0%, #0d3ef2 100%);
 
@@ -1957,11 +1977,12 @@
   &__phone,
   &__email,
   &__adress {
+    position: relative;
     color: #ababab;
 
     &::before {
       position: absolute;
-      left: 0;
+      left: -30px;
       @include f-icons;
       color: #ffffff;
     }
@@ -1969,8 +1990,18 @@
   }
 
   &__phone {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -6px;
+      height: 44px;
+    }
+
     &::before {
       content: "\e830";
+      left: -80px;
     }
 
     &:hover {
@@ -1980,6 +2011,15 @@
 
   &__email {
     display: block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -6px;
+      height: 44px;
+    }
 
     &::before {
       content: "\e818";
@@ -2012,12 +2052,25 @@
   }
 
   &__item {
+
     list-style: none;
+
   }
 
   &__link {
+    position: relative;
     color: #ababab;
     transition: all 0.3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -12px;
+      height: 44px;
+      min-width: 44px;
+    }
 
     &:hover {
       color: #ffffff;
@@ -2241,7 +2294,7 @@
     position: relative;
     display: inline-block;
 
-    & + & {
+    &+& {
       padding-left: 20px;
 
       &::before {
@@ -2276,7 +2329,7 @@
   }
 
   &__products {
-    & + & {
+    &+& {
       margin-left: 30px;
       margin-inline-end: auto;
     }
@@ -2309,7 +2362,7 @@
       font-size: 12px;
     }
 
-    & + & {
+    &+& {
       margin-left: 30px;
     }
   }
@@ -2341,6 +2394,25 @@
     outline: none;
   }
 
+  &__col {
+
+    fill: rgb(116, 123, 134);
+
+    &--active {
+      fill: rgb(6, 116, 236);
+    }
+  }
+
+  &__line {
+
+    fill: rgb(116, 123, 134);
+
+    &--active {
+      fill: rgb(6, 116, 236);
+    }
+  }
+
+
 }
 
 ////////end section filter//////////////////
@@ -2363,6 +2435,14 @@
 //start aside/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //start aside-categories////////////////////////////////////
 .categories {
+  &__title {
+    cursor: pointer;
+  }
+
+  &__list {
+    display: none;
+
+  }
 
   &__list-item {
     display: flex;
@@ -2373,20 +2453,47 @@
   &__num {
     color: #747b86;
   }
+
+  &__list-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -6px;
+    height: 44px;
+  }
+
 }
 
 
 //end aside-categories////////////////////////////////////
 //start aside-sort////////////////////////////////////
+.sort {
+  &__list {
+    display: none;
+  }
 
-.sort__list-link::before {
-  content: "";
-  background-image: url(../images/icons/Ellipse-icon.png);
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  &__list-link {
+    &::before {
+      content: "";
+      background-image: url(../images/icons/Ellipse-icon.png);
+      width: 10px;
+      height: 10px;
+      top: 5px
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 44px;
+    }
+  }
 }
+
 
 //end aside-sort////////////////////////////////////
 //start aside-price////////////////////////////////////
@@ -2411,6 +2518,7 @@
   }
 }
 
+
 //end aside-price////////////////////////////////////
 //end aside//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2424,23 +2532,49 @@
   align-self: flex-start;
   margin-bottom: 60px;
 
+  &__inner {
+    width: 100%;
+  }
+
   &__content {
-    display: inline-block;
     max-width: 260px;
     min-height: 370px;
     margin-bottom: 30px;
     background-color: #ffffff;
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    transition: all cubic-bezier(.4, .72, .39, .73) 0.5s;
+
+    &--active {
+      display: flex;
+      min-height: 210px;
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__photo {
-    height: 160px;
+    height: 210px;
     margin: 0;
+
+    &--active {
+      height: 100%;
+      max-width: 230px;
+      width: 100%;
+      float: left;
+
+    }
   }
 
   &__photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: all 0.3s;
+
+    &--active {
+      border-radius: 4px 0 0 4px;
+    }
 
     &:hover {
       opacity: 0.8;
@@ -2450,6 +2584,9 @@
   &__desc {
     padding: 15px 17px 5px;
 
+    &--active {
+      display: none;
+    }
   }
 
   &__subtitle {
@@ -2460,6 +2597,10 @@
 
   &__user {
     margin-bottom: 10px;
+
+    .production__img {
+      margin: 0;
+    }
   }
 
   &__plugin {
@@ -2469,6 +2610,11 @@
 
   &__rating {
     padding: 15px 23px;
+
+    &--active {
+      display: none;
+    }
+
   }
 
 
@@ -2487,8 +2633,89 @@
   &__star {
     margin-left: 0;
   }
+
+  ////start production list////////////////////////
+  &__list {
+    display: none;
+    width: 100%;
+
+    &--active {
+      display: flex;
+
+      padding: 25px 10px 22px 20px;
+    }
+  }
+
+  &__list-desc {
+    max-width: 240px;
+    padding-right: 30px;
+    border-right: 1px solid #ececec;
+
+
+    .production__plugin {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  &__list-text {
+    padding-bottom: 15px;
+  }
+
+  &__list-rate {
+    width: 210px;
+    padding: 20px 20px 10px 20px;
+    border-right: 1px solid #ececec;
+
+    .production__like {
+      margin: 0;
+    }
+  }
+
+  &__comments {
+    position: relative;
+    padding-left: 20px;
+    color: #7e7e7e;
+
+    &::before {
+      content: "\e83f";
+      position: absolute;
+      @include f-icons;
+      left: 0;
+      font-size: 15px;
+      color: #7f4ec2;
+    }
+  }
+
+  &__list-price {
+    display: flex;
+    max-width: 125px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .production__price {
+      margin-bottom: 25px;
+    }
+
+    .production__basket {
+      margin: 0 auto;
+
+    }
+  }
+
+  &__star {
+    padding: 0;
+  }
+
+  &__star-text {
+    color: #6f7d8d;
+  }
 }
 
+////end production list//////////////////////////////////////////
 //end section production //////////////////////////////////////////////////////
 //////start pagination/////////////////
 

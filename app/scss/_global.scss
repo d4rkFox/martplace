@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  position: relative;
   height: 100%;
   font-size: 16px;
   line-height: 30px;
@@ -56,9 +57,8 @@ button {
   padding: 0 30px;
 }
 
-
 .title {
-  height: 110px;
+  min-height: 110px;
   margin-bottom: 50px;
   padding: 40px 360px 40px 28px;
   background-color: #ffffff;
@@ -84,7 +84,6 @@ button {
     text-align: center;
   }
 }
-
 
 //////// start slick button global ////////////////////////////////////////
 .slick {
@@ -235,6 +234,14 @@ button {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -6px;
+        height: 44px;
       }
     }
 
@@ -419,20 +426,68 @@ button {
 
 
 .notification__link,
-.notification__status,
 .message__link,
 .basket__link {
   position: relative;
-  padding: 15px;
+  padding: 10px 25px;
   width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  height: 70px;
+  margin-top: 30px;
   text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
 
   &::before {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
     color: #7e8fa1;
     font-family: 'Linearicons-Free';
     font-size: 20px;
+  }
+}
+
+
+.notification,
+.message,
+.basket {
+  position: relative;
+
+  &__item {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+    top: 99%;
+    width: 370px;
+    border: none;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $bg-text;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8px 10px 8px;
+      border-color: transparent transparent $bg-text transparent;
+      box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+    }
   }
 }
 
@@ -440,8 +495,9 @@ button {
 .message__edit,
 .basket__edit {
   position: absolute;
-  top: -3px;
+  top: -9px;
   right: 0;
+  z-index: 5;
   min-width: 22px;
   height: 22px;
   padding: 0 5px;
@@ -516,12 +572,14 @@ button {
     }
   }
 
-  &:hover {
-
+  // &:hover,
+  &--active 
+  {
     .user__list,
     .home__list,
     .wordpress__list,
     .products-menu__list {
+      // display: block;
       height: auto;
       padding: 20px;
       overflow: visible;
@@ -537,48 +595,6 @@ button {
     }
   }
 
-}
-
-
-.notification,
-.message,
-.basket {
-  position: relative;
-
-  &__item {
-    position: absolute;
-    height: 0;
-    overflow: hidden;
-    z-index: 1;
-    top: 66px;
-    width: 370px;
-    border: none;
-    background-color: #fff;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background-color: $bg-text;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 8px 10px 8px;
-      border-color: transparent transparent $bg-text transparent;
-      box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
-    }
-  }
 }
 
 
@@ -608,10 +624,6 @@ button {
   }
 
 }
-
-
-
-
 
 //edit plugins//////////////////////////////////////////
 
@@ -676,6 +688,15 @@ button {
   padding: 10px 20px;
   background-color: #f1ecf9;
   border-radius: 30px;
+}
+
+.irs-from,
+.irs-single {
+  left: 0 !important;
+}
+
+.irs-to {
+  left: 64% !important;
 }
 
 //////end ionRange aside__price////////////////////
