@@ -146,24 +146,24 @@ $(function () {
         $('.price__list').slideToggle()
     });
 
-    $('.home').on('click', function () {
-        $('.home').toggleClass('home--active');
-        $('.home .menu__link').toggleClass('menu__link--active');
+    $('.dropdown-home').on('click', function () {
+        $('.dropdown-home .dropdown__button').toggleClass('dropdown__button--active');
+        $('.dropdown-home').toggleClass('dropdown-home--active');
     });
 
-    $('.products-menu').on('click', function () {
-        $('.products-menu').toggleClass('products-menu--active');
-        $('.products-menu .menu__link').toggleClass('menu__link--active');
+    $('.dropdown-products').on('click', function () {
+        $('.dropdown-products .dropdown__button').toggleClass('dropdown__button--active');
+        $('.dropdown-products').toggleClass('dropdown-products--active');
     });
 
-    $('.wordpress').on('click', function () {
-        $('.wordpress').toggleClass('wordpress--active');
-        $('.wordpress .menu__link').toggleClass('menu__link--active');
+    $('.dropdown-wordpress').on('click', function () {
+        $('.dropdown-wordpress .dropdown__button').toggleClass('dropdown__button--active');
+        $('.dropdown-wordpress').toggleClass('dropdown-wordpress--active');
     });
 
     $('.pages').on('click', function () {
+        $('.pages__button').toggleClass('pages__button--active');
         $('.pages').toggleClass('pages--active');
-        $('.pages .menu__link').toggleClass('menu__link--active');
     });
 
     $('.popular .tab').on('click', function (event) {

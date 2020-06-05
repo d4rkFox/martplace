@@ -246,7 +246,7 @@
   }
 
   .lnr-envelope {
-  
+
     &::before {
       position: absolute;
       right: 0;
@@ -254,6 +254,7 @@
       font-size: 15px;
       color: #7e8fa1;
     }
+
     &:hover::before {
       color: #e4d2d2;
     }
@@ -436,7 +437,6 @@
     text-align: center;
   }
 
-
   .lnr-trash {
     width: 35px;
     height: 35px;
@@ -548,7 +548,6 @@
   &__link {
     padding-left: 40px;
   }
-
 }
 
 //////////////end user hover////////////////////////
@@ -619,38 +618,17 @@
       margin-left: 28px;
     }
   }
-
-  &__link {
-    padding: 20px 0;
-    font-size: 15px;
-    line-height: 42px;
-    @include f500;
-    text-transform: uppercase;
-    background-color: transparent;
-    border: none;
-    outline: transparent;
-    color: #333333;
-    transition: all 0.3s;
-    &--active {
-      color: $bg-text;
-    }
-    &:hover {
-      color: $bg-text;
-    }
-  }
 }
 
 //start pages hover/////////////////////////////////////////////////////////////////////////////
 
 .pages {
 
-
   &__item {
     position: absolute;
     height: 0;
     overflow: hidden;
     display: flex;
-
     z-index: 1;
     top: 80px;
     left: 0;
@@ -669,6 +647,26 @@
       height: 1px;
       width: 100%;
       background-color: $bg-text;
+    }
+  }
+
+  &__button {
+    padding: 20px 0;
+    font-size: 15px;
+    line-height: 42px;
+    @include f500;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    transition: all 0.3s;
+
+    &--active {
+      color: $bg-text;
+    }
+
+    &:hover {
+      color: $bg-text;
     }
   }
 
@@ -727,6 +725,7 @@
       }
     }
   }
+
   // &:hover,
   &--active {
     .pages__item {
@@ -2389,6 +2388,7 @@
       height: 44px;
     }
   }
+
   &__item {
     display: block;
   }
@@ -2551,11 +2551,11 @@
   }
 
   &__rate--active {
-      width: 330px;
-      padding: 0px 0px 0px 20px;
-      border-right: 1px solid #ececec;
-      border-left: 1px solid #ececec;
-    }
+    width: 330px;
+    padding: 0px 0px 0px 20px;
+    border-right: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+  }
 
   &__like {
     margin: 0;

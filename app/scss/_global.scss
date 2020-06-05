@@ -296,7 +296,7 @@ button {
     &:hover {
       color: $bg-text;
     }
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -633,9 +633,25 @@ button {
 }
 
 .user,
-.home,
-.wordpress,
-.products-menu {
+.dropdown{
+  &__button {
+    padding: 20px 0;
+    font-size: 15px;
+    line-height: 42px;
+    @include f500;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    transition: all 0.3s;
+    &--active {
+      color: $bg-text;
+    }
+    &:hover {
+      color: $bg-text;
+    }
+  }
+
   &__list {
     position: absolute;
     top: 64px;
@@ -659,7 +675,6 @@ button {
       width: 100%;
       background-color: $bg-text;
     }
-   
   }
 
   &__item {
@@ -680,7 +695,7 @@ button {
     line-height: 10px;
     color: #54667a;
     transition: all 0.5s;
-   
+
     &:hover {
       color: #fff;
 
@@ -696,14 +711,15 @@ button {
       color: #54667a;
     }
   }
+}
 
-  // &:hover,
+.dropdown-home,
+.dropdown-products,
+.dropdown-wordpress,
+.dropdown-page {
   &--active {
 
-    .user__list,
-    .home__list,
-    .wordpress__list,
-    .products-menu__list {
+    .dropdown__list {
       // display: block;
       height: auto;
       padding: 20px;
@@ -712,14 +728,10 @@ button {
       transition: all 0.5s;
     }
 
-    .user__link,
-    .home__link,
-    .wordpress__link,
-    .products-menu__link {
+    .dropdown__link {
       line-height: 44px;
     }
   }
-
 }
 
 .notification,
