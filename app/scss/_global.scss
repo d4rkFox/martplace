@@ -519,7 +519,7 @@ button {
 .categories,
 .sort {
 
-  &__list-link {
+  &__link {
     position: relative;
     font-size: 15px;
     line-height: 36px;
@@ -659,6 +659,7 @@ button {
       width: 100%;
       background-color: $bg-text;
     }
+   
   }
 
   &__item {
@@ -679,7 +680,7 @@ button {
     line-height: 10px;
     color: #54667a;
     transition: all 0.5s;
-
+   
     &:hover {
       color: #fff;
 

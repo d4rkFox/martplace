@@ -148,18 +148,22 @@ $(function () {
 
     $('.home').on('click', function () {
         $('.home').toggleClass('home--active');
+        $('.home .menu__link').toggleClass('menu__link--active');
     });
 
     $('.products-menu').on('click', function () {
         $('.products-menu').toggleClass('products-menu--active');
+        $('.products-menu .menu__link').toggleClass('menu__link--active');
     });
 
     $('.wordpress').on('click', function () {
         $('.wordpress').toggleClass('wordpress--active');
+        $('.wordpress .menu__link').toggleClass('menu__link--active');
     });
 
     $('.pages').on('click', function () {
         $('.pages').toggleClass('pages--active');
+        $('.pages .menu__link').toggleClass('menu__link--active');
     });
 
     $('.popular .tab').on('click', function (event) {
