@@ -156,10 +156,11 @@
                                                     </div>
                                                     <div class="message__subtitle">
                                                         <div class="message__name">
-                                                            <div class="message__username lnr-envelope">
+                                                            <div
+                                                                class="message__username lnr-envelope lnr-envelope--active">
                                                                 Washim
                                                             </div>
-                                                            <div class="message__time message__time--active" href="#">
+                                                            <div class="message__time" href="#">
                                                                 Just now
                                                             </div>
                                                         </div>
@@ -175,10 +176,11 @@
                                                     </div>
                                                     <div class="message__subtitle">
                                                         <div class="message__name">
-                                                            <div class="message__username lnr-envelope">
+                                                            <div
+                                                                class="message__username lnr-envelope lnr-envelope--active">
                                                                 Washim
                                                             </div>
-                                                            <div class="message__time message__time--active" href="#">
+                                                            <div class="message__time" href="#">
                                                                 Just now
                                                             </div>
                                                         </div>
@@ -291,7 +293,7 @@
                                                         Wordpress
                                                     </a>
                                                 </div>
-                                                <div class="basker__status">
+                                                <div class="basket__status">
                                                     <button class="basket__del lnr-trash" type="button">
                                                     </button>
                                                     <div class="basket__price">
@@ -314,7 +316,7 @@
                                                         Wordpress
                                                     </a>
                                                 </div>
-                                                <div class="basker__status">
+                                                <div class="basket__status">
                                                     <button class="basket__del lnr-trash" type="button">
                                                     </button>
                                                     <div class="basket__price">
@@ -911,9 +913,9 @@
                                 </ul>
                             </nav>
                             <div class="menu__search">
-                                <form class="menu__search-form">
-                                    <input class="menu__search-text" type="search" placeholder="Search product here...">
-                                    <button class="menu__search-btn" type="submit"></button>
+                                <form class="menu__form">
+                                    <input class="menu__text" type="search" placeholder="Search product here...">
+                                    <button class="menu__button" type="submit"></button>
                                 </form>
                             </div>
                         </div>
@@ -934,9 +936,9 @@
                         </div>
 
                         <div class="themes__search">
-                            <form class="themes__search-form">
-                                <input class="themes__search-text" type="search" placeholder="Search product here...">
-                                <button class="themes__search-btn" type="submit"></button>
+                            <form class="themes__form">
+                                <input class="themes__text" type="search" placeholder="Search product here...">
+                                <button class="themes__btn" type="submit"></button>
                             </form>
                         </div>
                         <!-- start breadcrumbs>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
@@ -955,17 +957,16 @@
                         <!-- end breadcrumbs>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                     </div>
                 </section>
-
                 <section class="filter">
                     <div class="container">
                         <div class="filter__inner">
-                            <div class="filter__products filter__products--active" ;">
+                            <div class="filter__products filter__products--active">
                                 New Products
                             </div>
-                            <div class="filter__products" ;">
+                            <div class="filter__products">
                                 Popular Products
                             </div>
-                            <div class="filter__btn" ;">
+                            <div class="filter__btn">
                                 <div class="filter__wrapper-select">
                                     <select class="filter__dropdown">
                                         <option class="filter__item">Price : Low to High</option>
@@ -1008,9 +1009,7 @@
                             <aside class="aside">
                                 <div class="aside__inner">
                                     <div class="aside__categories categories">
-                                        <!-- start aside>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                                         <!-- start aside-categories >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
                                         <div class="categories__title">
                                             Categories
                                         </div>
@@ -1081,43 +1080,36 @@
                                         <div class="sort__title">
                                             Filter Products
                                         </div>
-                                        <ul class="sort__list">
-                                            <li class="sort__list-item">
-                                                <a class="sort__list-link" href="#">
-                                                    Trending Products
-                                                </a>
-                                            </li>
-                                            <li class="sort__list-item">
-                                                <a class="sort__list-link" href="#">
+                                        <form class="sort__list">
+                                            <label class="sort__list-item" name="radio">
+                                                <input class="sort__list-link" type="radio" name="radio" value="1">
+                                                Trending Products
+                                            </label>
+                                            <label class="sort__list-item" name="radio">
+                                                <input class="sort__list-link" type="radio" name="radio" value="2">
                                                     Popular Products
-                                                </a>
-                                            </li>
-                                            <li class="sort__list-item">
-                                                <a class="sort__list-link" href="#">
+                                            </label>
+                                            <label class="sort__list-item" name="radio">
+                                                <input class="sort__list-link" type="radio" name="radio" value="3">
                                                     New Products
-                                                </a>
-                                            </li>
-                                            <li class="sort__list-item">
-                                                <a class="sort__list-link" href="#">
+                                            </label>
+                                            <label class="sort__list-item" name="radio">
+                                                <input class="sort__list-link" type="radio" name="radio" value="4">
                                                     Best Seller
-                                                </a>
-                                            </li>
-                                            <li class="sort__list-item">
-                                                <a class="sort__list-link" href="#">
+                                            </label>
+                                            <label class="sort__list-item" name="radio">
+                                                <input class="sort__list-link" type="radio" name="radio" value="5">
                                                     Best Rating
-                                                </a>
-                                            </li>
-                                            <li class="sort__list-item">
-                                                <a class="sort__list-link" href="#">
+                                            </label>
+                                            <label class="sort__list-item" name="radio">
+                                                <input class="sort__list-link" type="radio" name="radio" value="6">
                                                     Low Price
-                                                </a>
-                                            </li>
-                                            <li class="sort__list-item">
-                                                <a class="sort__list-link" href="#">
+                                            </label>
+                                            <label class="sort__list-item" name="radio">
+                                                <input class="sort__list-link" type="radio" name="radio" value="7">
                                                     High Price
-                                                </a>
-                                            </li>
-                                        </ul>
+                                            </label>
+                                        </form>
                                     </div>
                                 </div>
                                 <!-- end aside-sort >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
@@ -1137,182 +1129,236 @@
                                 </div>
                             </aside>
 
-                            <!-- end aside-price>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                <!-- end aside >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+                            <!-- end aside-price>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+                            <!-- end aside >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                             <div class="production__inner">
                                 <!-- start section production -->
                                 <section class="production">
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/html.jpg"
-                                                    alt="HTML">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/wordpress.jpg"
+                                                alt="HTML">
+                                        </a>
+                                        <div class="production__desc">
+                                            <div class="production__title">
                                                 <div class="production__subtitle">
                                                     Best YouTube Channels
                                                     For UI/UX Designers
                                                 </div>
-                                                <div class="production__list-text">
+                                                <div class="production__text production__text--active">
                                                     Nunc placerat mi id nisi inter dum mollis. Praesent phare...
                                                 </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
-                                                    HTML
+                                                <a class="production__plugin production__plugin--wordpress production__plugin--active"
+                                                    href="#">
+                                                    Wordpress
                                                 </a>
                                             </div>
-                                            <div class="production__list-rate">
-
+                                            <div class="production__rate">
                                                 <div class="production__user">
                                                     <div class="production__img">
                                                         <img class="production__avatar"
                                                             src="images/content/avatar-3.jpg" alt="avatar">
                                                     </div>
-                                                    <div class="production__username">
+                                                    <a class="production__username" href="#">
                                                         Artcorner
-                                                    </div>
+                                                    </a>
                                                 </div>
-                                                <div class="production__like">
+                                                <div class="production__like production__like--active">
                                                     90 loves
                                                 </div>
-                                                <div class="production__comments">
+                                                <div class="production__comments production__comments--active">
+                                                    90 Comments
+                                                </div>
+                                                <div class="production__star-inner">
+                                                    <div class="production__star">
+                                                    </div>
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        892
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="production__price-list">
+                                            <div class="production__price">
+                                                $10 - $50
+                                            </div>
+                                            <div class="production__basket production__basket--active">
+                                                892
+                                            </div>
+                                            <a class="production__plugin production__plugin--wordpress" href="#">
+                                                Wordpress
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/html.jpg" alt="HTML">
+                                        </a>
+                                        <div class="production__desc">
+                                            <div class="production__title">
+                                                <div class="production__subtitle">
+                                                    Best YouTube Channels
+                                                    For UI/UX Designers
+                                                </div>
+                                                <div class="production__text production__text--active">
+                                                    Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                                                </div>
+                                                <a class="production__plugin production__plugin--html production__plugin--active"
+                                                    href="#">
+                                                    HTML
+                                                </a>
+                                            </div>
+                                            <div class="production__rate">
+                                                <div class="production__user">
+                                                    <div class="production__img">
+                                                        <img class="production__avatar"
+                                                            src="images/content/avatar-4.jpg" alt="avatar">
+                                                    </div>
+                                                    <a class="production__username" href="#">
+                                                        Themepert
+                                                    </a>
+                                                </div>
+                                                <div class="production__like production__like--active">
+                                                    90 loves
+                                                </div>
+                                                <div class="production__comments production__comments--active">
                                                     90 Comments
                                                 </div>
                                                 <div class="production__star-inner">
                                                     <div class="production__star">
 
                                                     </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $10 - $50
-                                                </div>
-                                                <div class="production__basket">
-                                                    892
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        2700
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Best YouTube Channels
-                                                For UI/UX Designers
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-3.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
+                                        <div class="production__price-list">
                                             <div class="production__price">
-                                                $10 - $50
+                                                $39.00
                                             </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
+                                            <div class="production__basket production__basket--active">
+                                                2700
+                                            </div>
+                                            <a class="production__plugin production__plugin--html" href="#">
+                                                HTML
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/psd.jpg" alt="HTML">
+                                        </a>
+                                        <div class="production__desc">
+                                            <div class="production__title">
+                                                <div class="production__subtitle">
+                                                    MartPlace Extension
+                                                    Bundle
+                                                </div>
+                                                <div class="production__text production__text--active">
+                                                    Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                                                </div>
+                                                <a class="production__plugin production__plugin--psd production__plugin--active"
+                                                    href="#">
+                                                    PSD
+                                                </a>
+                                            </div>
+                                            <div class="production__rate">
+                                                <div class="production__user">
+                                                    <div class="production__img">
+                                                        <img class="production__avatar"
+                                                            src="images/content/avatar-6.jpg" alt="avatar">
+                                                    </div>
+                                                    <a class="production__username" href="#">
+                                                        Themepert
+                                                    </a>
+                                                </div>
+                                                <div class="production__like production__like--active">
+                                                    90 loves
+                                                </div>
+                                                <div class="production__comments production__comments--active">
+                                                    90 Comments
+                                                </div>
+                                                <div class="production__star-inner">
+                                                    <div class="production__star">
+
+                                                    </div>
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        56
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="production__price-list">
+                                            <div class="production__price">
+                                                $59.00
+                                            </div>
+                                            <div class="production__basket production__basket--active">
+                                                56
+                                            </div>
+                                            <a class="production__plugin production__plugin--psd" href="#">
                                                 HTML
                                             </a>
                                         </div>
                                     </div>
 
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/wordpress.jpg"
+                                                alt="HTML">
+                                        </a>
 
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/wordpress.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
+                                        <div class="production__desc">
+                                            <div class="production__title">
                                                 <div class="production__subtitle">
                                                     Best YouTube Channels
                                                     For UI/UX Designers
                                                 </div>
-                                                <div class="production__list-text">
+                                                <div class="production__text production__text--active">
                                                     Nunc placerat mi id nisi inter dum mollis. Praesent phare...
                                                 </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
+                                                <a class="production__plugin production__plugin--wordpress production__plugin--active"
+                                                    href="#">
                                                     Wordpress
                                                 </a>
                                             </div>
-                                            <div class="production__list-rate">
-
+                                            <div class="production__rate">
                                                 <div class="production__user">
                                                     <div class="production__img">
                                                         <img class="production__avatar"
                                                             src="images/content/avatar-3.jpg" alt="avatar">
                                                     </div>
-                                                    <div class="production__username">
-                                                        Theme-Valley
-                                                    </div>
+                                                    <a class="production__username" href="#">
+                                                        Artcorner
+                                                    </a>
                                                 </div>
-                                                <div class="production__like">
+                                                <div class="production__like production__like--active">
                                                     90 loves
                                                 </div>
-                                                <div class="production__comments">
+                                                <div class="production__comments production__comments--active">
                                                     90 Comments
                                                 </div>
                                                 <div class="production__star-inner">
                                                     <div class="production__star">
 
                                                     </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $18
-                                                </div>
-                                                <div class="production__basket">
-                                                    892
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        892
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-3.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Theme-Valley
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                892
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
+                                        <div class="production__price-list">
                                             <div class="production__price">
-                                                $18
+                                                $10 - $50
+                                            </div>
+                                            <div class="production__basket production__basket--active">
+                                                892
                                             </div>
                                             <a class="production__plugin production__plugin--wordpress" href="#">
                                                 Wordpress
@@ -1320,269 +1366,177 @@
                                         </div>
                                     </div>
 
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/psd.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/html.jpg" alt="HTML">
+                                        </a>
+                                        <div class="production__desc">
+                                            <div class="production__title">
                                                 <div class="production__subtitle">
-                                                    MartPlace Extension
-                                                    Bundle
+                                                    Best YouTube Channels
+                                                    For UI/UX Designers
                                                 </div>
-                                                <div class="production__list-text">
+                                                <div class="production__text production__text--active">
                                                     Nunc placerat mi id nisi inter dum mollis. Praesent phare...
                                                 </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
-                                                    PSD
+                                                <a class="production__plugin production__plugin--html production__plugin--active"
+                                                    href="#">
+                                                    HTML
                                                 </a>
                                             </div>
-                                            <div class="production__list-rate">
-
+                                            <div class="production__rate">
                                                 <div class="production__user">
                                                     <div class="production__img">
                                                         <img class="production__avatar"
                                                             src="images/content/avatar-4.jpg" alt="avatar">
                                                     </div>
-                                                    <div class="production__username">
-                                                        Artcorner
-                                                    </div>
+                                                    <a class="production__username" href="#">
+                                                        Themepert
+                                                    </a>
                                                 </div>
-                                                <div class="production__like">
+                                                <div class="production__like production__like--active">
                                                     90 loves
                                                 </div>
-                                                <div class="production__comments">
+                                                <div class="production__comments production__comments--active">
                                                     90 Comments
                                                 </div>
                                                 <div class="production__star-inner">
                                                     <div class="production__star">
 
                                                     </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $59.00
-                                                </div>
-                                                <div class="production__basket">
-                                                    821
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        2700
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                MartPlace Extension
-                                                Bundle
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-4.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                821
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
+                                        <div class="production__price-list">
                                             <div class="production__price">
-                                                $59.00
+                                                $39.00
                                             </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/html.jpg"
-                                                    alt="HTML">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
-                                                <div class="production__subtitle">
-                                                    Best YouTube Channels
-                                                    For UI/UX Designers
-                                                </div>
-                                                <div class="production__list-text">
-                                                    Nunc placerat mi id nisi inter dum mollis. Praesent phare...
-                                                </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
-                                                    HTML
-                                                </a>
+                                            <div class="production__basket production__basket--active">
+                                                2700
                                             </div>
-                                            <div class="production__list-rate">
-
-                                                <div class="production__user">
-                                                    <div class="production__img">
-                                                        <img class="production__avatar"
-                                                            src="images/content/avatar-3.jpg" alt="avatar">
-                                                    </div>
-                                                    <div class="production__username">
-                                                        Artcorner
-                                                    </div>
-                                                </div>
-                                                <div class="production__like">
-                                                    90 loves
-                                                </div>
-                                                <div class="production__comments">
-                                                    90 Comments
-                                                </div>
-                                                <div class="production__star-inner">
-                                                    <div class="production__star">
-
-                                                    </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $10 - $50
-                                                </div>
-                                                <div class="production__basket">
-                                                    892
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Best YouTube Channels
-                                                For UI/UX Designers
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-3.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $10 - $50
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
+                                            <a class="production__plugin production__plugin--html" href="#">
                                                 HTML
                                             </a>
                                         </div>
                                     </div>
 
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/wordpress.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/psd.jpg" alt="HTML">
+                                        </a>
+                                        <div class="production__desc">
+                                            <div class="production__title">
                                                 <div class="production__subtitle">
-                                                    Best YouTube Channels
-                                                    For UI/UX Designers
+                                                    MartPlace Extension
+                                                    Bundle
                                                 </div>
-                                                <div class="production__list-text">
+                                                <div class="production__text production__text--active">
                                                     Nunc placerat mi id nisi inter dum mollis. Praesent phare...
                                                 </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
-                                                    Wordpress
+                                                <a class="production__plugin production__plugin--psd production__plugin--active"
+                                                    href="#">
+                                                    PSD
                                                 </a>
                                             </div>
-                                            <div class="production__list-rate">
-
+                                            <div class="production__rate">
                                                 <div class="production__user">
                                                     <div class="production__img">
                                                         <img class="production__avatar"
-                                                            src="images/content/avatar-3.jpg" alt="avatar">
+                                                            src="images/content/avatar-6.jpg" alt="avatar">
                                                     </div>
-                                                    <div class="production__username">
-                                                        Theme-Valley
-                                                    </div>
+                                                    <a class="production__username" href="#">
+                                                        Themepert
+                                                    </a>
                                                 </div>
-                                                <div class="production__like">
+                                                <div class="production__like production__like--active">
                                                     90 loves
                                                 </div>
-                                                <div class="production__comments">
+                                                <div class="production__comments production__comments--active">
                                                     90 Comments
                                                 </div>
                                                 <div class="production__star-inner">
                                                     <div class="production__star">
 
                                                     </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $18
-                                                </div>
-                                                <div class="production__basket">
-                                                    892
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        56
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-3.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Theme-Valley
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                892
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
+                                        <div class="production__price-list">
                                             <div class="production__price">
-                                                $18
+                                                $59.00
+                                            </div>
+                                            <div class="production__basket production__basket--active">
+                                                56
+                                            </div>
+                                            <a class="production__plugin production__plugin--psd" href="#">
+                                                HTML
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/wordpress.jpg"
+                                                alt="HTML">
+                                        </a>
+
+                                        <div class="production__desc">
+                                            <div class="production__title">
+                                                <div class="production__subtitle">
+                                                    Best YouTube Channels
+                                                    For UI/UX Designers
+                                                </div>
+                                                <div class="production__text production__text--active">
+                                                    Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                                                </div>
+                                                <a class="production__plugin production__plugin--wordpress production__plugin--active"
+                                                    href="#">
+                                                    Wordpress
+                                                </a>
+                                            </div>
+                                            <div class="production__rate">
+                                                <div class="production__user">
+                                                    <div class="production__img">
+                                                        <img class="production__avatar"
+                                                            src="images/content/avatar-3.jpg" alt="avatar">
+                                                    </div>
+                                                    <a class="production__username" href="#">
+                                                        Artcorner
+                                                    </a>
+                                                </div>
+                                                <div class="production__like production__like--active">
+                                                    90 loves
+                                                </div>
+                                                <div class="production__comments production__comments--active">
+                                                    90 Comments
+                                                </div>
+                                                <div class="production__star-inner">
+                                                    <div class="production__star">
+
+                                                    </div>
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        892
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="production__price-list">
+                                            <div class="production__price">
+                                                $10 - $50
+                                            </div>
+                                            <div class="production__basket production__basket--active">
+                                                892
                                             </div>
                                             <a class="production__plugin production__plugin--wordpress" href="#">
                                                 Wordpress
@@ -1590,596 +1544,128 @@
                                         </div>
                                     </div>
 
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/psd.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/html.jpg" alt="HTML">
+                                        </a>
+                                        <div class="production__desc">
+                                            <div class="production__title">
                                                 <div class="production__subtitle">
-                                                    MartPlace Extension
-                                                    Bundle
+                                                    Best YouTube Channels
+                                                    For UI/UX Designers
                                                 </div>
-                                                <div class="production__list-text">
+                                                <div class="production__text production__text--active">
                                                     Nunc placerat mi id nisi inter dum mollis. Praesent phare...
                                                 </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
-                                                    PSD
+                                                <a class="production__plugin production__plugin--html production__plugin--active"
+                                                    href="#">
+                                                    HTML
                                                 </a>
                                             </div>
-                                            <div class="production__list-rate">
-
+                                            <div class="production__rate">
                                                 <div class="production__user">
                                                     <div class="production__img">
                                                         <img class="production__avatar"
                                                             src="images/content/avatar-4.jpg" alt="avatar">
                                                     </div>
-                                                    <div class="production__username">
-                                                        Artcorner
-                                                    </div>
+                                                    <a class="production__username" href="#">
+                                                        Themepert
+                                                    </a>
                                                 </div>
-                                                <div class="production__like">
+                                                <div class="production__like production__like--active">
                                                     90 loves
                                                 </div>
-                                                <div class="production__comments">
+                                                <div class="production__comments production__comments--active">
                                                     90 Comments
                                                 </div>
                                                 <div class="production__star-inner">
                                                     <div class="production__star">
-
                                                     </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $59.00
-                                                </div>
-                                                <div class="production__basket">
-                                                    821
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        2700
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                MartPlace Extension
-                                                Bundle
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-4.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                821
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
+                                        <div class="production__price-list">
                                             <div class="production__price">
-                                                $59.00
+                                                $39.00
                                             </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/html.jpg"
-                                                    alt="HTML">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
-                                                <div class="production__subtitle">
-                                                    Best YouTube Channels
-                                                    For UI/UX Designers
-                                                </div>
-                                                <div class="production__list-text">
-                                                    Nunc placerat mi id nisi inter dum mollis. Praesent phare...
-                                                </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
-                                                    HTML
-                                                </a>
+                                            <div class="production__basket production__basket--active">
+                                                2700
                                             </div>
-                                            <div class="production__list-rate">
-
-                                                <div class="production__user">
-                                                    <div class="production__img">
-                                                        <img class="production__avatar"
-                                                            src="images/content/avatar-3.jpg" alt="avatar">
-                                                    </div>
-                                                    <div class="production__username">
-                                                        Artcorner
-                                                    </div>
-                                                </div>
-                                                <div class="production__like">
-                                                    90 loves
-                                                </div>
-                                                <div class="production__comments">
-                                                    90 Comments
-                                                </div>
-                                                <div class="production__star-inner">
-                                                    <div class="production__star">
-
-                                                    </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $10 - $50
-                                                </div>
-                                                <div class="production__basket">
-                                                    892
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Best YouTube Channels
-                                                For UI/UX Designers
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-3.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $10 - $50
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
+                                            <a class="production__plugin production__plugin--html" href="#">
                                                 HTML
                                             </a>
                                         </div>
                                     </div>
 
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/wordpress.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
-                                                <div class="production__subtitle">
-                                                    Best YouTube Channels
-                                                    For UI/UX Designers
-                                                </div>
-                                                <div class="production__list-text">
-                                                    Nunc placerat mi id nisi inter dum mollis. Praesent phare...
-                                                </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
-                                                    Wordpress
-                                                </a>
-                                            </div>
-                                            <div class="production__list-rate">
-
-                                                <div class="production__user">
-                                                    <div class="production__img">
-                                                        <img class="production__avatar"
-                                                            src="images/content/avatar-3.jpg" alt="avatar">
-                                                    </div>
-                                                    <div class="production__username">
-                                                        Theme-Valley
-                                                    </div>
-                                                </div>
-                                                <div class="production__like">
-                                                    90 loves
-                                                </div>
-                                                <div class="production__comments">
-                                                    90 Comments
-                                                </div>
-                                                <div class="production__star-inner">
-                                                    <div class="production__star">
-
-                                                    </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $18
-                                                </div>
-                                                <div class="production__basket">
-                                                    892
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+                                    <div class="production__content ">
+                                        <a class="production__link" href="#">
+                                            <img class="production__photo-img" src="images/content/psd.jpg" alt="HTML">
+                                        </a>
                                         <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-3.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Theme-Valley
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                892
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $18
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                Wordpress
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/psd.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <!-- start production__list LIST cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__list">
-                                            <div class="production__list-desc">
+                                            <div class="production__title">
                                                 <div class="production__subtitle">
                                                     MartPlace Extension
                                                     Bundle
                                                 </div>
-                                                <div class="production__list-text">
+                                                <div class="production__text production__text--active">
                                                     Nunc placerat mi id nisi inter dum mollis. Praesent phare...
                                                 </div>
-                                                <a class="production__plugin production__plugin--wordpress" href="#">
+                                                <a class="production__plugin production__plugin--psd production__plugin--active"
+                                                    href="#">
                                                     PSD
                                                 </a>
                                             </div>
-                                            <div class="production__list-rate">
-
+                                            <div class="production__rate">
                                                 <div class="production__user">
                                                     <div class="production__img">
                                                         <img class="production__avatar"
-                                                            src="images/content/avatar-4.jpg" alt="avatar">
+                                                            src="images/content/avatar-6.jpg" alt="avatar">
                                                     </div>
-                                                    <div class="production__username">
-                                                        Artcorner
-                                                    </div>
+                                                    <a class="production__username" href="#">
+                                                        Themepert
+                                                    </a>
                                                 </div>
-                                                <div class="production__like">
+                                                <div class="production__like production__like--active">
                                                     90 loves
                                                 </div>
-                                                <div class="production__comments">
+                                                <div class="production__comments production__comments--active">
                                                     90 Comments
                                                 </div>
                                                 <div class="production__star-inner">
                                                     <div class="production__star">
 
                                                     </div>
-                                                    <span class="production__star-text">(34)</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="production__list-price">
-                                                <div class="production__price">
-                                                    $59.00
-                                                </div>
-                                                <div class="production__basket">
-                                                    821
+                                                    <span class="production__edit production__edit--active">(34)</span>
+                                                    <div class="production__basket">
+                                                        56
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- end production__list LIST cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <!-- start production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                MartPlace Extension
-                                                Bundle
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-4.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                821
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
+                                        <div class="production__price-list">
                                             <div class="production__price">
                                                 $59.00
                                             </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
+                                            <div class="production__basket production__basket--active">
+                                                56
+                                            </div>
+                                            <a class="production__plugin production__plugin--psd" href="#">
+                                                HTML
                                             </a>
                                         </div>
-                                    </div>
 
-                                    <!-- end production__desc GRID cart!!!!! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-
-
-
-
-                                    <!-- <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/plugins.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-1.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $18
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
-                                            </a>
-                                        </div>
                                     </div>
 
 
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/html.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-5.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $18
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
-                                            </a>
-                                        </div>
-                                    </div>
 
 
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/psd.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-4.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $18
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/plugins.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-1.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $18
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
-                                            </a>
-                                        </div>
-                                    </div>
 
 
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/html.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-5.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $18
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
-                                            </a>
-                                        </div>
-                                    </div>
 
-
-                                    <div class="production__content">
-                                        <div class="production__photo">
-                                            <a class="production__link-img" href="#">
-                                                <img class="production__photo-img" src="images/content/psd.jpg"
-                                                    alt="plugins">
-                                            </a>
-                                        </div>
-                                        <div class="production__desc">
-                                            <div class="production__subtitle">
-                                                Financte and Consulting
-                                                Business Theme
-                                            </div>
-                                            <div class="production__user">
-                                                <div class="production__img">
-                                                    <img class="production__avatar" src="images/content/avatar-4.jpg"
-                                                        alt="avatar">
-                                                </div>
-                                                <div class="production__username">
-                                                    Artcorner
-                                                </div>
-                                            </div>
-                                            <div class="production__star">
-                                            </div>
-                                            <div class="production__basket">
-                                                427
-                                            </div>
-                                        </div>
-                                        <div class="production__rating">
-                                            <div class="production__price">
-                                                $18
-                                            </div>
-                                            <a class="production__plugin production__plugin--wordpress" href="#">
-                                                PSD
-                                            </a>
-                                        </div>
-                                    </div> -->
                                 </section>
                                 <!-- start pagination>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                                 <div class="pagination">
@@ -2216,6 +1702,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <!-- end pagination>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                             </div>
                         </div>
                     </div>

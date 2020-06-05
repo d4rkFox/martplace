@@ -93,11 +93,22 @@ $(function () {
     $('.filter__list').on('click', function () {
         $('.production__content').addClass('production__content--active'),
             $('.production__photo').addClass('production__photo--active'),
-            $('.filter__col').removeClass('filter__col--active'),
             $('.filter__line').addClass('filter__line--active'),
-            $('.production__photo-img').addClass('production__photo-img--active'),
+            $('.filter__col').removeClass('filter__col--active'),
+            $('.production__text').removeClass('production__text--active'),
+            $('.production__desc .production__plugin').removeClass('production__plugin--active'),
+            $('.production__like').removeClass('production__like--active'),
+            $('.production__comments').removeClass('production__comments--active'),
+            $('.production__price-list .production__basket').removeClass('production__basket--active'),
+            $('.production__star-inner .production__basket').addClass('production__basket--active'),
+            $('.production__price-list .production__plugin').addClass('production__plugin--active'),
+            $('.production__link').addClass('production__link--active'),
+            $('.production__rate').addClass('production__rate--active'),
+            $('.production__edit').removeClass('production__edit--active'),
             $('.production__desc').addClass('production__desc--active'),
-            $('.production__rating').addClass('production__rating--active'),
+            $('.production__price-list').addClass('production__price-list--active'),
+            $('.production__title').addClass('production__title--active'),
+            $('.production__photo-img').addClass('production__photo-img--active'),
             $('.production__list').addClass('production__list--active')
     });
 
@@ -106,13 +117,24 @@ $(function () {
             $('.production__photo').removeClass('production__photo--active'),
             $('.filter__line').removeClass('filter__line--active'),
             $('.filter__col').addClass('filter__col--active'),
-            $('.production__photo-img').removeClass('production__photo-img--active'),
+            $('.production__text').addClass('production__text--active'),
+            $('.production__desc .production__plugin').addClass('production__plugin--active'),
+            $('.production__like').addClass('production__like--active'),
+            $('.production__comments').addClass('production__comments--active'),
+            $('.production__price-list .production__basket').addClass('production__basket--active'),
+            $('.production__star-inner .production__basket').removeClass('production__basket--active'),
+            $('.production__price-list .production__plugin').removeClass('production__plugin--active'),
+            $('.production__link').removeClass('production__link--active'),
+            $('.production__rate').removeClass('production__rate--active'),
+            $('.production__edit').addClass('production__edit--active'),
             $('.production__desc').removeClass('production__desc--active'),
-            $('.production__rating').removeClass('production__rating--active'),
+            $('.production__price-list').removeClass('production__price-list--active'),
+            $('.production__title').removeClass('production__title--active'),
+            $('.production__photo-img').addClass('production__photo-img--active'),
             $('.production__list').removeClass('production__list--active')
     });
 
-    $('.categories__title').on('click', function () {
+    $('.aside__categories .categories__title').on('click', function () {
         $('.categories__list').slideToggle()
     });
 
@@ -138,6 +160,15 @@ $(function () {
 
     $('.pages').on('click', function () {
         $('.pages').toggleClass('pages--active');
+    });
+
+    $('.popular .tab').on('click', function (event) {
+        var id = $(this).attr('data-id');
+        $('.popular').find('.tab-item').removeClass('active-tab').hide();
+        $('.popular .tabs').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
     });
 
     // $(window).resize(function () {
