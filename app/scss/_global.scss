@@ -93,7 +93,7 @@ button {
 
   .breadcrumbs {
     text-align: left;
-    margin: 0 0 20px 0;
+    margin: 0 0 19px 0;
   }
 
   &__title {
@@ -106,6 +106,18 @@ button {
 //end background/////////////////////
 //start all search/////////////////////
 
+//start filter select//////////
+
+.filter-select {
+  border: none;
+  font-size: 16px;
+  line-height: 32px;
+  background-color: transparent;
+  outline: transparent;
+  cursor: pointer;
+}
+
+//end filter select//////////
 .menu,
 .post {
   &__search {
@@ -162,7 +174,9 @@ button {
 }
 
 //end all search/////////////////////
-
+.bg {
+  background-color: #eff1f5;
+}
 
 //////// start slick button global ////////////////////////////////////////
 .slick {
@@ -568,7 +582,8 @@ button {
     transition: all 0.3s;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     color: #e4d2d2;
   }
 }
@@ -633,7 +648,7 @@ button {
 }
 
 .user,
-.dropdown{
+.dropdown {
   &__button {
     padding: 20px 0;
     font-size: 15px;
@@ -644,9 +659,11 @@ button {
     border: none;
     outline: transparent;
     transition: all 0.3s;
+
     &--active {
       color: $bg-text;
     }
+
     &:hover {
       color: $bg-text;
     }
@@ -731,6 +748,32 @@ button {
     .dropdown__link {
       line-height: 44px;
     }
+  }
+}
+
+
+.user {
+  transition: all 0.9s;
+
+  &:hover {
+    box-shadow: inset 0px 0px 10px -8px;
+
+    .user__list {
+      // display: block;
+      height: auto;
+      padding: 20px;
+      overflow: visible;
+      line-height: 44px;
+      transition: all 0.5s;
+    }
+
+    .user__link {
+      line-height: 44px;
+    }
+  }
+
+  &:focus {
+    box-shadow: inset 0px 0px 10px -5px;
   }
 }
 

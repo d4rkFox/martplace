@@ -11,9 +11,11 @@
 </head>
 
 <body>
+    <!-- start page wrapprer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
     <div class="page__wrapper">
-        <!-- Start Header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <!-- start page content>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
         <div class="page__content">
+            <!-- Start Header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
             <header class="header">
                 <div class="header__top">
                     <div class="container">
@@ -135,9 +137,9 @@
                                     <!-- end notification >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                                     <!-- end start message >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                                     <div class="header__message message">
-                                        <button class="message__link lnr-envelope"">
-                               <span class=" message__edit">
-                                            6
+                                        <button class="message__link lnr-envelope" #">
+                                            <span class=" message__edit">
+                                                6
                                             </span>
                                             </a>
                                             <div class="message__item">
@@ -149,7 +151,7 @@
                                                         View All
                                                     </a>
                                                 </div>
-                                                <a class="message__user" href="">
+                                                <a class="message__user" href="#">
                                                     <div class="message__img" href="#">
                                                         <img class="message__avatar" src="images/content/avatar-5.jpg"
                                                             alt="avatar">
@@ -169,7 +171,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="message__user" href="">
+                                                <a class="message__user" href="#">
                                                     <div class="message__img" href="#">
                                                         <img class="message__avatar" src="images/content/avatar-5.jpg"
                                                             alt="avatar">
@@ -189,7 +191,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="message__user" href="">
+                                                <a class="message__user" href="#">
                                                     <div class="message__img" href="#">
                                                         <img class="message__avatar" src="images/content/avatar-6.jpg"
                                                             alt="avatar">
@@ -215,7 +217,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="message__user" href="">
+                                                <a class="message__user" href="#">
                                                     <div class="message__img" href="#">
                                                         <img class="message__avatar" src="images/content/avatar-6.jpg"
                                                             alt="avatar">
@@ -241,7 +243,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="message__user" href="">
+                                                <a class="message__user" href="#">
                                                     <div class="message__img" href="#">
                                                         <img class="message__avatar" src="images/content/avatar-6.jpg"
                                                             alt="avatar">
@@ -441,7 +443,7 @@
                                     </span>
                                 </div>
                                 <ul class="menu__list">
-                                           <!--start home hover>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+                                    <!--start home hover>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                                     <li class="menu__item dropdown dropdown-home">
                                         <button class="dropdown__button">
                                             HOME
@@ -470,40 +472,40 @@
                                             all products
                                         </button>
                                         <!--start products-menu>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-                                    
-                                            <ul class="dropdown__list">
-                                                <li class="dropdown__item">
-                                                    <a class="dropdown__link" href="#">
-                                                        Recent Items
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown__item">
-                                                    <a class="dropdown__link" href="#">
-                                                        Popular Items
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown__item">
-                                                    <a class="dropdown__link" href="#">
-                                                        Featured Items
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown__item">
-                                                    <a class="dropdown__link" href="#">
-                                                        Free Templates
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown__item">
-                                                    <a class="dropdown__link" href="#">
-                                                        Follow Feed
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown__item">
-                                                    <a class="dropdown__link" href="#">
-                                                        Top Authors
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        
+
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="#">
+                                                    Recent Items
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="#">
+                                                    Popular Items
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="#">
+                                                    Featured Items
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="#">
+                                                    Free Templates
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="#">
+                                                    Follow Feed
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="#">
+                                                    Top Authors
+                                                </a>
+                                            </li>
+                                        </ul>
+
                                         <!--end products-menu>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                                     </li>
                                     <li class="menu__item dropdown dropdown-wordpress">
@@ -957,6 +959,7 @@
                         <!-- end breadcrumbs>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                     </div>
                 </section>
+                <!-- start section filter -->
                 <section class="filter">
                     <div class="container">
                         <div class="filter__inner">
@@ -967,19 +970,19 @@
                                 Popular Products
                             </div>
                             <div class="filter__btn">
-                                <div class="filter__wrapper-select">
+                                <form class="filter__wrapper-select">
                                     <select class="filter__dropdown">
                                         <option>Price : Low to High</option>
                                         <option>Price : High to Low </option>
                                     </select>
-                                </div>
-                                <div class="filter__wrapper-select">
+                                </form>
+                                <form class="filter__wrapper-select">
                                     <select class="filter__dropdown">
                                         <option>12 Items Per Page</option>
                                         <option>24 Items Per Page</option>
                                         <option>48 Items Per Page</option>
                                     </select>
-                                </div>
+                                </form>
                                 <div class="filter__sort">
                                     <button class="filter__grid">
                                         <svg class="filter__col filter__col--active" xmlns="http://www.w3.org/2000/svg"
@@ -1000,7 +1003,7 @@
                         </div>
                     </div>
                 </section>
-
+                <!-- end section filter -->
                 <!-- end section themes>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                 <!-- start-aside >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                 <div class="wrapper__box">
@@ -1087,27 +1090,27 @@
                                             </label>
                                             <label class="sort__item" name="radio">
                                                 <input class="sort__link" type="radio" name="radio" value="2">
-                                                    Popular Products
+                                                Popular Products
                                             </label>
                                             <label class="sort__item" name="radio">
                                                 <input class="sort__link" type="radio" name="radio" value="3">
-                                                    New Products
+                                                New Products
                                             </label>
                                             <label class="sort__item" name="radio">
                                                 <input class="sort__link" type="radio" name="radio" value="4">
-                                                    Best Seller
+                                                Best Seller
                                             </label>
                                             <label class="sort__item" name="radio">
                                                 <input class="sort__link" type="radio" name="radio" value="5">
-                                                    Best Rating
+                                                Best Rating
                                             </label>
                                             <label class="sort__item" name="radio">
                                                 <input class="sort__link" type="radio" name="radio" value="6">
-                                                    Low Price
+                                                Low Price
                                             </label>
                                             <label class="sort__item" name="radio">
                                                 <input class="sort__link" type="radio" name="radio" value="7">
-                                                    High Price
+                                                High Price
                                             </label>
                                         </form>
                                     </div>
@@ -1120,7 +1123,7 @@
                                     </div>
                                     <div class="price__list">
                                         <form class="price__form">
-                                            <input type="text" class="js-range-slider" name="my_range" value="" />
+                                            <input type="text" class="js-range-slider" name="my_range" value="1" />
                                         </form>
                                         <button type="button" class="price__button link" href="#">
                                             Search Update
@@ -1732,6 +1735,8 @@
 
             <!-- start footer -->
         </div>
+        <!-- end page content >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <!-- start footer -->
         <footer class="footer">
             <div class="footer__top">
                 <div class="container">
@@ -1864,22 +1869,16 @@
                             </form>
                             <div class="footer__social">
                                 <a class="footer__social-link footer__social-link--facebook" href="#">
-                                    <img class="footer__social-item" src="images/2.jpg" alt="">
                                 </a>
                                 <a class="footer__social-link footer__social-link--twitter" href="#">
-                                    <img class="footer__social-item" src="images/3.jpg" alt="">
                                 </a>
                                 <a class="footer__social-link footer__social-link--google" href="#">
-                                    <img class="footer__social-item" src="images/1.jpg" alt="">
                                 </a>
                                 <a class="footer__social-link footer__social-link--pinterest" href="#">
-                                    <img class="footer__social-item" src="images/4.jpg" alt="">
                                 </a>
                                 <a class="footer__social-link footer__social-link--in" href="#">
-                                    <img class="footer__social-item" src="images/5.jpg" alt="">
                                 </a>
                                 <a class="footer__social-link footer__social-link--dribbble" href="#">
-                                    <img class="footer__social-item" src="images/6.jpg" alt="">
                                 </a>
                             </div>
                         </div>
@@ -1901,9 +1900,9 @@
                 </div>
             </div>
         </footer>
-
         <!-- end footer>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
     </div>
+    <!-- end page wrapprer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
