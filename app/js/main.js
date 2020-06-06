@@ -175,6 +175,7 @@ $(function () {
         return false;
     });
 
+    $('input, select').styler();
     // $(window).resize(function () {
     //     if($(window).width() <= 1200){
     //         $('.production__content').addClass('production__content--media');
