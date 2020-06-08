@@ -491,6 +491,20 @@
     .ban {
         display: none;
     }
+    
+    .login__check{
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 44px;
+            min-width: 44px;
+          }
+    }
 }
 
 @media (max-width: 768px) {
@@ -1084,7 +1098,7 @@
             min-width: 44px;
             min-height: 44px;
 
-            &--left::before, 
+            &--left::before,
             &--right::before {
                 top: 7.5px;
             }
@@ -1119,6 +1133,26 @@
             margin-left: 0;
         }
     }
+
+    .login {
+        padding: 25px 0 30px;
+        &__inner {
+            min-height: auto;
+        }
+        &__forms {
+            padding: 20px;
+        }
+        &__button {
+            width: 100%;
+        }
+        &__top {
+            padding: 25px 0 10px;
+        }
+        &__text--recovery {
+            padding: 0 20px;
+        }
+    }
+
 }
 
 @media (min-width: 992px) {

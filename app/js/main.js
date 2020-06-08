@@ -175,15 +175,13 @@ $(function () {
         return false;
     });
 
-    $('input, select').styler();
-    // $(window).resize(function () {
-    //     if($(window).width() <= 1200){
-    //         $('.production__content').addClass('production__content--media');
-    //     };
-    //     if($(window).width() >= 1200){
-    //         $('.production__content').removeClass('production__content--media');
-    //     };
-    // });
+    $('input[type="checkbox"], select').styler();
+
+    $('.login__check').on('click', function () {
+        $('.jq-checkbox ').toggleClass('checked');
+        $('.jq-checkbox ').addClass('focused');
+        
+    });
 
     var mixer = mixitup('.product__inner-items');
 });
