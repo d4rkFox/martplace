@@ -669,6 +669,7 @@
     &:hover {
       color: $bg-text;
     }
+    
   }
 
   &__martplace {
@@ -897,7 +898,7 @@
     padding: 16px 70px 16px 20px;
     background-color: transparent;
     border: transparent;
-    outline: none;
+    outline: transparent;
     border-left: 1px solid #dcdcdc;
     appearance: none;
   }
@@ -921,6 +922,10 @@
     line-height: 42px;
 
     &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
       opacity: 0.8;
     }
   }
@@ -2006,8 +2011,12 @@
     border-radius: 46px;
     background-color: $bg-text;
     color: #ffffff;
+    outline: transparent;
 
     &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
       opacity: 0.8;
     }
   }
@@ -2023,9 +2032,13 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    outline: none;
     transition: all 0.3s;
 
     &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
       opacity: 0.8;
     }
 
@@ -2162,18 +2175,14 @@
     right: 0;
     width: 110px;
     height: 55px;
+    font-size: 15px;
+    color: #ffffff;
     background: $bg-text;
     border: none;
     border-radius: 45px;
     outline: transparent;
-
-    &::before {
-      content: "\e86f";
-      @include f-icons;
-      position: absolute;
-      transform: translate(-50%, -50%);
-      font-size: 15px;
-      color: #ffffff;
+    &:focus {
+      opacity: 0.8;
     }
   }
 

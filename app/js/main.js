@@ -175,7 +175,7 @@ $(function () {
         return false;
     });
 
-    $('input[type="checkbox"], select').styler();
+    $('input[type="checkbox"]').styler();
 
     $('.login__check').on('click', function () {
         $('.jq-checkbox ').toggleClass('checked');
