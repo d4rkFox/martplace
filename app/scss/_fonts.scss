@@ -1,5 +1,5 @@
 @font-face {
-    font-family:'Quicksand-Light';
+    font-family:'Quicksand';
     src: url('../fonts/Quicksand-Light.woff2') (format('woff2')),
          url('../fonts/Quicksand-Light.woff') (format('woff'));
     font-weight: 300;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family:'Quicksand-Regular';
+    font-family:'Quicksand';
     src: url('../fonts/Quicksand-Regular.woff2') (format('woff2')),
          url('../fonts/Quicksand-Regular.woff') (format('woff'));
     font-weight: 400;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family:'Quicksand-Medium';
+    font-family:'Quicksand';
     src: url('../fonts/Quicksand-Medium.woff2') (format('woff2')),
          url('../fonts/Quicksand-Medium.woff') (format('woff'));
     font-weight: 500;
@@ -25,7 +25,7 @@
 }
 
 @font-face {
-    font-family:'Quicksand-Bold';
+    font-family:'Quicksand';
     src: url('../fonts/Quicksand-Bold.woff2') (format('woff2')),
          url('../fonts/Quicksand-Bold.woff') (format('woff'));
     font-weight: 700;
@@ -56,6 +56,10 @@
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.lnr-question-circle:before {
+	content: "\e87d";
 }
 
 .lnr-trash:before {
