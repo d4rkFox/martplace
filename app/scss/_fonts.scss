@@ -58,6 +58,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.lnr-inbox:before {
+	content: "\e81a";
+}
+
 .lnr-question-circle:before {
 	content: "\e87d";
 }

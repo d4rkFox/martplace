@@ -119,6 +119,16 @@ button {
     min-height: 280px;
     text-align: center;
   }
+
+  &--contact{
+    padding: 90px 0 30px;
+    min-height: 280px;
+    text-align: center;
+  }
+  &__edit {
+    display: block;
+    font-size: 20px;
+  }
 }
 
 //end background/////////////////////
@@ -574,7 +584,8 @@ button {
 .error,
 .blog,
 .login,
-.launch {
+.launch,
+.contact {
   &__button {
     display: inline-block;
     height: 58px;
