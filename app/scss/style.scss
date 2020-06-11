@@ -1166,6 +1166,13 @@
     background-color: #ffffff;
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    transition: all 0.3s;
+
+    &--active {
+      display: flex;
+      max-width: 100%;
+      min-height: auto;
+    }
   }
 
   &__filter {
@@ -1213,6 +1220,12 @@
     background-color: #a3b1c4;
     border-radius: 50%;
     box-shadow: 0 10px 0 0 #a3b1c4, 0 20px 0 0 #a3b1c4;
+  }
+
+  &__desc--active {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
   }
 
   &__list {
@@ -1319,6 +1332,10 @@
     flex-basis: calc(33.333% - 30px);
     margin-left: 30px;
 
+    &--active {
+      flex-basis: 100%;
+    }
+
 
   }
 
@@ -1337,6 +1354,13 @@
     &:hover {
       opacity: 1;
     }
+  }
+
+  &__rating--active {
+    flex-direction: column;
+    padding: 50px 45px 50px 45px;
+    border-left: 1px solid #ececec;
+    border-top: none;
   }
 
   &__link {
@@ -1370,6 +1394,10 @@
   &__star {
     margin-right: auto;
     margin-left: 14px;
+
+    &--active {
+      order: 1;
+    }
   }
 }
 
@@ -1897,6 +1925,7 @@
   &__adress {
     position: relative;
     color: #ababab;
+    font-style: normal;
 
     &::before {
       position: absolute;
@@ -2556,9 +2585,6 @@
     object-fit: cover;
     transition: all 0.3s;
 
-    &--active {
-      border-radius: 4px 0 0 4px;
-    }
 
     &:hover {
       opacity: 0.8;
@@ -3561,6 +3587,7 @@
       background-color: #fff;
       color: $bg-text;
       box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+
       &:hover {
         background-color: rgba($color: #ffffff, $alpha: 0.5);
         border: 1px solid transparent;

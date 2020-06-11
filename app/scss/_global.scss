@@ -349,17 +349,28 @@ button {
     margin-bottom: 25px;
     height: 230px;
     overflow: hidden;
+    &--active {
+        margin-bottom: 0;
+        min-height: 240px;
+        height: 100%;
+        max-width: 400px;
+        width: 100%;
+        border-radius: 4px 0 0 4px;
+    }
   }
 
   &__photo-img {
     position: absolute;
     max-width: 100%;
     border-radius: 4px 4px 0 0;
+    &--active {
+      border-radius: 4px 0 0 4px;
+    }
   }
 
   &__desc {
     padding: 0 30px;
-  }
+    }
 
   &__subtitle {
     font-size: 20px;
@@ -478,6 +489,17 @@ button {
     &:focus {
       opacity: 0.8;
     }
+    &--active {
+      margin: 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -10px;
+      height: 44px;
+    }
 
     &::before {
       content: "\e813";
@@ -501,6 +523,14 @@ button {
     &:hover,
     &:focus {
       opacity: 0.8;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -10px;
+      height: 44px;
     }
 
     &::before {

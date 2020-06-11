@@ -92,8 +92,7 @@ $(function () {
 
     $('.filter__list').on('click', function () {
         $('.production__item').addClass('production__item--active'),
-        $('.production__content').addClass('production__content--active'),
-            $('.production__photo').addClass('production__photo--active'),
+            $('.production__content').addClass('production__content--active'),
             $('.filter__line').addClass('filter__line--active'),
             $('.filter__col').removeClass('filter__col--active'),
             $('.production__text').removeClass('production__text--active'),
@@ -110,13 +109,20 @@ $(function () {
             $('.production__price-list').addClass('production__price-list--active'),
             $('.production__title').addClass('production__title--active'),
             $('.production__photo-img').addClass('production__photo-img--active'),
-            $('.production__list').addClass('production__list--active')
+            $('.production__list').addClass('production__list--active'),
+            $('.product__content').addClass('product__content--active'),
+            $('.product__rating').addClass('product__rating--active'),
+            $('.product__item').addClass('product__item--active'),
+            $('.product__photo').addClass('product__photo--active'),
+            $('.product__photo-img').addClass('product__photo-img--active'),
+            $('.product__desc').addClass('product__desc--active'),
+            $('.product__star').addClass('product__star--active'),
+            $('.product__like').addClass('product__like--active')
     });
 
     $('.filter__grid').on('click', function () {
         $('.production__item').removeClass('production__item--active'),
-        $('.production__content').removeClass('production__content--active'),
-            $('.production__photo').removeClass('production__photo--active'),
+            $('.production__content').removeClass('production__content--active'),
             $('.filter__line').removeClass('filter__line--active'),
             $('.filter__col').addClass('filter__col--active'),
             $('.production__text').addClass('production__text--active'),
@@ -132,8 +138,16 @@ $(function () {
             $('.production__desc').removeClass('production__desc--active'),
             $('.production__price-list').removeClass('production__price-list--active'),
             $('.production__title').removeClass('production__title--active'),
-            $('.production__photo-img').addClass('production__photo-img--active'),
-            $('.production__list').removeClass('production__list--active')
+            $('.production__photo-img').removeClass('production__photo-img--active'),
+            $('.production__list').removeClass('production__list--active'),
+            $('.product__content').removeClass('product__content--active'),
+            $('.product__rating').removeClass('product__rating--active'),
+            $('.product__item').removeClass('product__item--active'),
+            $('.product__photo').removeClass('product__photo--active'),
+            $('.product__photo-img').removeClass('product__photo-img--active'),
+            $('.product__desc').removeClass('product__desc--active'),
+            $('.product__star').removeClass('product__star--active'),
+            $('.product__like').removeClass('product__like--active')
     });
 
     $('.aside__categories .categories__title').on('click', function () {
@@ -147,7 +161,7 @@ $(function () {
     $('.price__title').on('click', function () {
         $('.price__list').slideToggle()
     });
-    
+
     $('.dropdown').on('click', function () {
         $(this).find('.dropdown__button').toggleClass('dropdown__button--active');
     });
@@ -188,5 +202,5 @@ $(function () {
         $('.jq-checkbox ').addClass('focused');
     });
 
-var mixer = mixitup('.product__inner-items');
+    var mixer = mixitup('.product__inner-items');
 });
