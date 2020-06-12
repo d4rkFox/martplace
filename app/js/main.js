@@ -34,6 +34,15 @@ $(function () {
         spacing: "2px"
     });
 
+    $(".card-rating__star").rateYo({
+        starWidth: "16px",
+        ratedFill: "#ffc000",
+        rating: 4.5,
+        readOnly: true,
+        spacing: "5px"
+    });
+
+
     $('.followers__wrapper').slick({
         prevArrow: '<button type="button" class="slick-btn slick-btn__bg slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-btn slick-btn__bg slick-next"></button>',
@@ -186,10 +195,10 @@ $(function () {
         $(this).toggleClass('pages--active');
     });
 
-    $('.popular .tab').on('click', function (event) {
+    $('.popular .tab, .description .tab').on('click', function (event) {
         var id = $(this).attr('data-id');
-        $('.popular').find('.tab-item').removeClass('active-tab').hide();
-        $('.popular .tabs').find('.tab').removeClass('active');
+        $('.popular, .description').find('.tab-item').removeClass('active-tab').hide();
+        $('.popular .tabs, .description .tabs').find('.tab').removeClass('active');
         $(this).addClass('active');
         $('#' + id).addClass('active-tab').fadeIn();
         return false;

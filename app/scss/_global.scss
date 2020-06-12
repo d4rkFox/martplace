@@ -76,6 +76,10 @@ button {
   font-size: 36px;
   margin-bottom: 28px;
   color: #000000;
+  &--template {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
 
   &__text {
     color: #0674ec;
@@ -152,7 +156,6 @@ button {
   }
 }
 //end bg favourites////////////////////////////////
-
 //start filter select//////////
 
 .filter-select {
@@ -229,9 +232,7 @@ button {
 }
 
 //////// start slick button global ////////////////////////////////////////
-
 //start checkbox//////////////////////////////////////////
-
 
 .jq-checkbox {
   position: relative;
@@ -327,7 +328,8 @@ button {
 .product,
 .followers,
 .reviews,
-.production {
+.production,
+.card-author {
   &__link-img {
     position: relative;
     min-width: 30px;
@@ -585,7 +587,10 @@ button {
 .blog,
 .login,
 .launch,
-.contact {
+.contact,
+.template,
+.card-price,
+.card-author {
   &__button {
     display: inline-block;
     height: 58px;
@@ -1056,6 +1061,96 @@ button {
 }
 
 //////end ionRange aside__price////////////////////
+////start social icon /////////////////////////
+.footer,
+.template,
+.card-author {
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 320px;
+  }
+
+  &__social-link {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    outline: none;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      color: #ffffff;
+      font-family: 'icomoon';
+      transition: all 0.3s;
+    }
+
+    &--facebook {
+      background-color: #395799;
+
+      &::before {
+        content: "\f09a";
+      }
+    }
+
+    &--twitter {
+      background-color: #19b2f5;
+
+      &::before {
+        content: "\f099";
+      }
+    }
+
+    &--google {
+      background-color: #f05b44;
+
+      &::before {
+        content: "\f1a0";
+      }
+    }
+
+    &--pinterest {
+      background-color: #9c0c1c;
+
+      &::before {
+        content: "\f0d2";
+      }
+    }
+
+    &--in {
+      background-color: #0da6be;
+
+      &::before {
+        content: "\f0e1";
+      }
+    }
+
+    &--dribbble {
+      background-color: #ea4c89;
+
+      &::before {
+        content: "\f17d";
+      }
+    }
+  }
+
+
+}
+
+////end social icon /////////////////////////
 // start tab on page block /////////////////////////////
 
 .tab {
