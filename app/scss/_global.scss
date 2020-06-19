@@ -234,7 +234,8 @@ button {
 //////// start slick button global ////////////////////////////////////////
 //start checkbox//////////////////////////////////////////
 
-.jq-checkbox {
+.jq-checkbox,
+.jq-radio {
   position: relative;
   display: inline-block;
   vertical-align: -4px;
@@ -248,11 +249,13 @@ button {
   cursor: pointer;
 }
 
-.jq-checkbox.checked {
+.jq-checkbox.checked,
+.jq-radio.checked {
   background-color: $bg-text;
 }
 
-.jq-checkbox.checked .jq-checkbox__div {
+.jq-checkbox.checked .jq-checkbox__div, 
+.jq-radio.checked .jq-radio__div {
   width: 11px;
   height: 6px;
   margin: 5px 0 0 4px;
@@ -321,6 +324,143 @@ button {
 }
 
 //////// end slick button global ////////////////////////////////////////
+
+// start dropdown-filter////////////////////////////////////////////
+
+.dropdown-filter {
+  &--favourites {
+      position: relative;
+      max-width: 145px;
+      width: 100%;
+      min-height: 100px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid #eceff2;
+      border-left: 1px solid #eceff2;
+  
+      &::before {
+        content: "\e874";
+        position: absolute;
+        right: 42px;
+        top: 37px;
+        width: 0;
+        height: 0;
+        @include f-icons;
+        font-size: 12px;
+      }
+  }
+  &__inner {
+    position: relative;
+    &--favourites {
+      width: 100%;
+      height: 100px;
+      padding-left: 25px;
+      padding-right: 20px;
+      color: #555555;
+      appearance: none;
+    }
+  }
+
+  &__btn {
+    margin-right: 30px;
+    font-size: 16px;
+    line-height: 32px;
+    color: $gray-text;
+    border: none;
+    background-color: transparent;
+    outline: transparent;
+    cursor: pointer;
+    &--favourites {
+      margin: 0;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    bottom: 35px;
+    right: 25px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0px;
+      bottom: -20px;
+      z-index: 3;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid #ffffff;
+    }
+
+    &:hover .dropdown-filter__list {
+      display: block !important;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    padding: 0;
+    border: none;
+    left: 7px;
+    width: 5px;
+    height: 5px;
+    background-color: #a3b1c4;
+    border-radius: 50%;
+    box-shadow: 0 10px 0 0 #a3b1c4, 0 20px 0 0 #a3b1c4;
+  }
+
+  &__list {
+    position: absolute;
+    right: -23px;
+    top: 46px;
+    display: none;
+    width: 180px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 2;
+    padding: 20px 25px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+    border-radius: 3px;
+
+  }
+
+  &__item {
+    line-height: 15px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 28px;
+    color: #747b86;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $bg-text;
+    }
+
+    &--active {
+      color: $bg-text;
+    }
+  }
+
+
+}
+
+// end dropdown-filter////////////////////////////////////////////
+
+
 //start global avatar///////////////////////////////////////////
 .notification,
 .message,
@@ -585,7 +725,7 @@ button {
 .price,
 .error,
 .blog,
-.login,
+.main-form,
 .launch,
 .contact,
 .template,
@@ -645,6 +785,7 @@ button {
   border-radius: 4px;
   box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
 
+
   &__list {
     padding: 0;
     list-style: none;
@@ -652,11 +793,21 @@ button {
 
   &__title {
     position: relative;
+    display: block;
     margin-bottom: 20px;
     padding-bottom: 22px;
-    border-bottom: 1px solid #e7ebee;
+    width: 100%;
+    text-align: inherit;
+    background-color: transparent;
     font-size: 20px;
     color: #010101;
+    border: none;
+    border-bottom: 1px solid #e7ebee;
+    outline: transparent;
+    transition: all 0.3s;
+    &:focus {
+      color: #0674ec;
+    }
 
     &::before {
       content: "\e874";
@@ -1062,16 +1213,12 @@ button {
 
 //////end ionRange aside__price////////////////////
 ////start social icon /////////////////////////
-.footer,
-.template,
-.card-author {
-  &__social {
+.social {
     display: flex;
     justify-content: space-between;
     max-width: 320px;
-  }
 
-  &__social-link {
+  &__link {
     position: relative;
     width: 44px;
     height: 44px;
@@ -1146,32 +1293,6 @@ button {
       }
     }
   }
-
-
 }
 
 ////end social icon /////////////////////////
-// start tab on page block /////////////////////////////
-
-.tab {
-  display: inline-block;
-}
-
-.tab-item {
-  display: none;
-
-  &:first-child {
-    display: block;
-  }
-}
-
-.tabs {
-  text-align: center;
-  border-bottom: 1px solid #e7ebee;
-
-  .active {
-    color: $bg-text;
-  }
-}
-
-// end tab on page block /////////////////////////////

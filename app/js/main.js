@@ -1,4 +1,5 @@
 $(function () {
+
     $('.weekly__items').slick({
         prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
@@ -70,8 +71,8 @@ $(function () {
         ],
     });
 
-    $('.product__filter-btn').on('click', function () {
-        $('.product__list')
+    $('.dropdown-filter__btn').on('click', function () {
+        $('.dropdown-filter__list')
             .slideToggle({
                 duration: 200,
                 easing: "linear",
@@ -195,16 +196,25 @@ $(function () {
         $(this).toggleClass('pages--active');
     });
 
-    $('.popular .tab, .description .tab').on('click', function (event) {
+    $('.popular__tab').on('click', function (event) {
         var id = $(this).attr('data-id');
-        $('.popular, .description').find('.tab-item').removeClass('active-tab').hide();
-        $('.popular .tabs, .description .tabs').find('.tab').removeClass('active');
-        $(this).addClass('active');
-        $('#' + id).addClass('active-tab').fadeIn();
+        $('.popular').find('.popular__box').removeClass('popular__box--active').hide();
+        $('.popular__tabs').find('.popular__tab').removeClass('popular__tab--active');
+        $(this).addClass('popular__tab--active');
+        $('#' + id).addClass('popular__box--active').fadeIn();
         return false;
     });
 
-    $('input[type="checkbox"]').styler();
+    $('.description__tab').on('click', function (event) {
+        var id = $(this).attr('data-id');
+        $('.description').find('.description__box').removeClass('description__box--active').hide();
+        $('.description__tabs').find('.description__tab').removeClass('description__tab--active');
+        $(this).addClass('description__tab--active');
+        $('#' + id).addClass('description__box--active').fadeIn();
+        return false;
+    });
+
+    $('input[type="checkbox"],.card-price__input').styler();
 
     $('.login__check').on('click', function () {
         $('.jq-checkbox ').toggleClass('checked');
